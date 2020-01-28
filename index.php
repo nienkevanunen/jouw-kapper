@@ -164,7 +164,7 @@
                 Wassen, knippen en föhnen <strong>v.a. €22,50</strong>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Permanenten <small>incl. knippen, föhnen en watergolf</small> <strong>v.a. €49,50</strong>
+                Permanenten <small>incl. knippen & föhnen, of watergolf</small> <strong>v.a. €49,50</strong>
               </li>
             </ul>
 					</div>
@@ -191,6 +191,12 @@
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Balayage <strong>v.a. €50,00</strong>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Wenkbrauwen verven <strong>€5,00</strong>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Wenkbrauwen epileren en verven <strong>€7,50</strong>
               </li>
             </ul>
 					</div>
@@ -235,7 +241,6 @@
       <div class="container">
         <div class="section-header">
           <h2>Portfolio</h2>
-          <!--<p>Check onze gallerij van fotos</p>-->
         </div>
       </div>
       <div class="container gallery-wrapper">
