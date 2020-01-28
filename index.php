@@ -237,7 +237,8 @@
           <h2>Portfolio</h2>
           <!--<p>Check onze gallerij van fotos</p>-->
         </div>
-
+      </div>
+      <div class="container gallery-wrapper">
         <div class="owl-carousel gallery-carousel">
           <?php
             for ($x = 12; $x > 0; $x--) {
