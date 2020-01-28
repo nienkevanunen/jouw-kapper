@@ -32,6 +32,17 @@
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157163460-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-157163460-1');
+  </script>
+
 </head>
 
 <body>
@@ -54,7 +65,7 @@
 
       <div id="logo" class="pull-left">
         <!-- Uncomment below if you prefer to use a text logo -->
-        <h1><img src="img/logo.png" alt="Jouwkapper"> <a href="#intro"><span>Jouw</span>kapper</a> 
+        <h1><img src="img/logo.png" alt="Jouwkapper"> <a href="/"><span>Jouw</span>kapper</a>
             </h1>
         <!--<a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a>-->
       </div>
@@ -65,6 +76,7 @@
           <li><a href="#diensten">Diensten</a></li>
           <li><a href="#schedule">Openingstijden</a></li>
           <li><a href="#gallery">Portfolio</a></li>
+          <li><a href="#events">Acties</a></li>
           <li class="buy-tickets"><a href="#contact">Contact</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -113,17 +125,17 @@
       Diensten Section
     ============================-->
     <section id="diensten" class="wow fadeInUp">
-    
+
       <div class="container">
-      
+
         <div class="section-header">
           <h2>Diensten</h2>
         </div>
-        
+
 				<div class="row justify-content-center">
 					<div class="col-lg-6">
             <h3>Knip & föhnebehandelingen</h3>
-            <ul class="list-group list-group-flush"> 
+            <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Heren knippen <strong>€13,50</strong>
               </li>
@@ -148,11 +160,17 @@
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Watergolf <strong>€22,50</strong>
               </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Wassen, knippen en föhnen <strong>v.a. €22,50</strong>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Permanenten <small>incl. knippen, föhnen en watergolf</small> <strong>v.a. €49,50</strong>
+              </li>
             </ul>
 					</div>
 					<div class="col-lg-6">
             <h3 class="">Kleurbehandelingen</h3>
-            <ul class="list-group list-group-flush"> 
+            <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Uitgroei (tot 3 cm) <strong>€25,00</strong>
               </li>
@@ -171,26 +189,29 @@
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Highlights/lowlights folie <strong>v.a. €25,00</strong>
               </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Balayage <strong>v.a. €50,00</strong>
+              </li>
             </ul>
 					</div>
         </div>
       </div>
     </section>
-    
+
     <!--==========================
       Schedule Section
     ============================-->
     <section id="schedule" class="wow fadeInUp">
-    
+
       <div class="container">
-      
+
         <div class="section-header">
           <h2>Openingstijden</h2>
         </div>
-        
+
 				<div class="row justify-content-center">
 					<div class="col-md-4">
-            <ul class="list-group list-group-flush"> 
+            <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Ma – Wo <strong>9:00 – 19:00</strong>
               </li>
@@ -198,14 +219,14 @@
                 Do – Za <strong>9:00 – 21:00</strong>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Zo <strong>GESLOTEN</strong>
+                Zo <strong>Op aanvraag</strong>
               </li>
             </ul>
 					</div>
         </div>
       </div>
     </section>
-    
+
     <!--==========================
       Gallery Section
     ============================-->
@@ -216,20 +237,51 @@
           <h2>Portfolio</h2>
           <!--<p>Check onze gallerij van fotos</p>-->
         </div>
-      </div>
 
-      <div class="owl-carousel gallery-carousel">
-        <a href="img/gallery/1.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/1.jpeg" alt=""></a>
-        <a href="img/gallery/2.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/2.jpeg" alt=""></a>
-        <a href="img/gallery/3.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/3.jpeg" alt=""></a>
-        <a href="img/gallery/4.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/4.jpeg" alt=""></a>
-        <a href="img/gallery/5.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/5.jpeg" alt=""></a>
-        <a href="img/gallery/6.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/6.jpeg" alt=""></a>
-        <a href="img/gallery/7.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/7.jpeg" alt=""></a>
-        <a href="img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/8.jpg" alt=""></a>
+        <div class="owl-carousel gallery-carousel">
+          <?php
+            for ($x = 12; $x > 0; $x--) {
+                echo '<a href="img/gallery/'.$x.'.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/'.$x.'.jpg" alt=""></a>';
+            }
+          ?>
+        </div>
       </div>
 
     </section>
+
+    <!--==========================
+      Event Section
+    ============================-->
+    <section id="events" class="wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Acties</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <div class="card mb-4 box-shadow">
+              <img class="card-img-top" src="img/acties/haarwensen.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Wil jij jouw haar doneren? Dan knippen wij jouw haar gratis!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="card-img-top" src="img/acties/bruiloft.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Heb jij binnenkort een feest of bruiloft? Of ben je zelf de bruid? Dan hebben wij verschillende arrangementen op maat! Haar en make-up, met eventueel nagels. Voor meer informatie zoals prijsopvage: bel, mail of app.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
 
 
     <!--==========================
@@ -255,7 +307,7 @@
                     </p>
                   </div>
                 </li>
-      
+
                 <li>
                   <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="fa fa-minus-circle"></i></a>
                   <div id="faq2" class="collapse" data-parent="#faq-list">
@@ -264,7 +316,7 @@
                     </p>
                   </div>
                 </li>
-      
+
                 <li>
                   <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="fa fa-minus-circle"></i></a>
                   <div id="faq3" class="collapse" data-parent="#faq-list">
@@ -273,7 +325,7 @@
                     </p>
                   </div>
                 </li>
-      
+
                 <li>
                   <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="fa fa-minus-circle"></i></a>
                   <div id="faq4" class="collapse" data-parent="#faq-list">
@@ -282,7 +334,7 @@
                     </p>
                   </div>
                 </li>
-      
+
                 <li>
                   <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="fa fa-minus-circle"></i></a>
                   <div id="faq5" class="collapse" data-parent="#faq-list">
@@ -291,7 +343,7 @@
                     </p>
                   </div>
                 </li>
-      
+
                 <li>
                   <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="fa fa-minus-circle"></i></a>
                   <div id="faq6" class="collapse" data-parent="#faq-list">
@@ -300,7 +352,7 @@
                     </p>
                   </div>
                 </li>
-      
+
               </ul>
           </div>
         </div>
@@ -322,12 +374,12 @@
         </div>
 
         <div class="row contact-info">
-        
+
           <div class="col-sm-4">
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3><i class="fa fa-home"></i></h3>
-              <address>Drevel 20, 1141 JX Monnickendam, Nederland</address>
+              <address><a target="_blank" href="https://www.google.com/maps/place/Drevel+20,+1141+JX+Monnickendam">Drevel 20, 1141 JX Monnickendam, Nederland</a></address>
             </div>
           </div>
 
@@ -335,7 +387,7 @@
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3><i class="fa fa-phone"></i></h3>
-              <p><a href="tel:+31650747279">+(31) 06 50 74 72 79</a></p>
+              <p><a href="tel:+31650747279">06 5074 7279</a></p>
             </div>
           </div>
 
@@ -391,7 +443,7 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <img src="img/logo.png" alt="Jouwkapper">
-            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
+            <p>Ik ben Marielle. Met al meer dan 15 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
@@ -401,6 +453,7 @@
               <li><i class="fa fa-angle-right"></i> <a href="#diensten">Diensten</a></li>
               <li><i class="fa fa-angle-right"></i> <a href="#schedule">Openingstijden</a></li>
               <li><i class="fa fa-angle-right"></i> <a href="#gallery">Portfolio</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#events">Acties</a></li>
               <li><i class="fa fa-angle-right"></i> <a href="#contact">Contact</a></li>
             </ul>
           </div>
@@ -412,7 +465,7 @@
               1141 JX Monnickendam <br>
               Nederland<br>
               <strong>Mobiel:</strong> (+31) 06 507 472 79<br>
-              <strong>Email:</strong> mariellewinter86@gmail.coml<br>
+              <strong>Email:</strong> mariellewinter86@gmail.com<br>
             </p>
 
             <div class="social-links">
@@ -427,10 +480,9 @@
 
           <div class="col-lg-3 col-md-6 footer-links">
             <div class="fb-page"
-              data-href="https://www.facebook.com/Jouw-kapper-245623526155098/" 
-              data-width="340"
-              data-hide-cover="false"
-              data-show-facepile="true">
+              data-tabs="timeline"
+              data-href="https://www.facebook.com/Jouw-kapper-245623526155098"
+              data-width="340">
             </div>
           </div>
 
