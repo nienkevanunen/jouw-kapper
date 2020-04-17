@@ -57,7 +57,7 @@
   <header id="header">
     <div class="container">
 
-      <div id="logo">
+      <div id="logo" class="pull-left">
         <!-- Uncomment below if you prefer to use a text logo -->
         <h1><img src="img/logo.png" alt="Jouwkapper"><div class="d-none d-sm-inline ml-2"><a href="/"><span>Jouw</span>kapper</a></div></h1>
       </div>
