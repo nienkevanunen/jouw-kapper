@@ -24,7 +24,7 @@
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.css?v=1.0" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: TheEvent
@@ -57,9 +57,9 @@
   <header id="header">
     <div class="container">
 
-      <div id="logo" class="pull-left">
+      <div id="logo">
         <!-- Uncomment below if you prefer to use a text logo -->
-        <h1><img src="img/logo.png" alt="Jouwkapper"> <a href="/"><span>Jouw</span>kapper</a></h1>
+        <h1><img src="img/logo.png" alt="Jouwkapper"><div class="d-none d-sm-inline ml-2"><a href="/"><span>Jouw</span>kapper</a></div></h1>
       </div>
 
       <nav id="nav-menu-container">
