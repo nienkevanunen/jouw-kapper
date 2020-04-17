@@ -48,14 +48,8 @@
 <body>
 
   <!-- Facebook -->
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=2465563456850426&autoLogAppEvents=1';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v6.0&appId=2465563456850426&autoLogAppEvents=1"></script>
 
   <!--==========================
     Header
@@ -88,10 +82,19 @@
   ============================-->
   <section id="intro">
     <div class="intro-container wow fadeIn">
-            <img src="img/logo.png" alt="Jouwkapper">
-      <h1 class="mb-4 pb-0">Welkom bij<br><span>jouw</span> kapper.</h1>
-      <div class="row justify-content-md-center"><div class="col-sm-4"><p>Ik ben Marielle. Met al meer dan 15 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.</p></div></div>
-      <!--<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+		<div class="row justify-content-md-center">
+			<div class="col-sm-4">
+			<p><strong><mark>I.v.m Covid-19 zijn wij helaas gesloten.</mark> Wij hopen u snel weer te kunnen helpen. Voor informatie kunt u contact met ons opnemen.</strong></p>
+			</div>
+		</div>
+		  <img src="img/logo.png" alt="Jouwkapper">
+		  <h1 class="mb-4 pb-0">Welkom bij<br><span>jouw</span> kapper.</h1>
+		<div class="row justify-content-md-center">
+			<div class="col-sm-4">
+			<p>Ik ben Marielle. Met al meer dan 15 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.</p>
+			</div>
+		</div>
+		<!--<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a>-->
       <a href="#diensten" class="about-btn scrollto">Meer informatie</a>
     </div>
@@ -475,22 +478,16 @@
             </p>
 
             <div class="social-links">
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              <a href="https://www.facebook.com/Jouw-kapper-245623526155098/" class="facebook"><i class="fa fa-facebook"></i></a>
+              <!--<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>-->
               <!--<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
               <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>-->
             </div>
 
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <div class="fb-page"
-              data-tabs="timeline"
-              data-href="https://www.facebook.com/Jouw-kapper-245623526155098"
-              data-width="340">
-            </div>
-          </div>
+          <div class="fb-page" data-href="https://www.facebook.com/Jouw-kapper-245623526155098/" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Jouw-kapper-245623526155098/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Jouw-kapper-245623526155098/">Jouw-kapper</a></blockquote></div>
 
         </div>
       </div>
