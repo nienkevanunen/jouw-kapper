@@ -59,9 +59,7 @@
 
       <div id="logo" class="pull-left">
         <!-- Uncomment below if you prefer to use a text logo -->
-        <h1><img src="img/logo.png" alt="Jouwkapper"> <a href="/"><span>Jouw</span>kapper</a>
-            </h1>
-        <!--<a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a>-->
+        <h1><img src="img/logo.png" alt="Jouwkapper"> <a href="/"><span>Jouw</span>kapper</a></h1>
       </div>
 
       <nav id="nav-menu-container">
