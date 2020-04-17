@@ -88,7 +88,7 @@
 		<div class="jumbotron text-white intro-container fadeIn ">
 			<div class="container text-center mt-5">
 				<div class="row justify-content-center">
-					<div class="col-sm-4">
+					<div class="col-sm-5">
 						<strong><mark>I.v.m Covid-19 zijn wij helaas gesloten.</mark> Wij hopen u snel weer te kunnen helpen. Voor informatie kunt u contact met ons opnemen.</strong>
 					</div>
 				</div>
@@ -97,7 +97,7 @@
 					<h1>Welkom bij<br><span>jouw</span> kapper.</h1>
 				</div>
 				<div class="row justify-content-center">
-					<div class="col-sm-4">
+					<div class="col-sm-5">
 						Ik ben Marielle. Met al meer dan 15 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.
 					</div>
 				</div>
