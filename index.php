@@ -135,76 +135,81 @@
     <section id="diensten" class="wow fadeInUp">
 
       <div class="container">
-
-        <div class="section-header">
-          <h2>Diensten</h2>
-        </div>
-
-				<div class="row justify-content-center">
-					<div class="col-lg-6">
+			<div class="section-header">
+			  <h2>Diensten</h2>
+			</div>
+			
+			<div class="row justify-content-center mb-2">
+				<div class="col-lg-6">
+					<strong><mark>I.v.m alle voorzorgsmaatregelen van COVID-19 voor onze hygiëne en veiligheid zijn alle prijzen omhoog gegaan.</strong>
+				</div>
+			</div>
+				
+			<div class="row justify-content-center">
+			<div class="col-lg-6 mt-2">
             <h3>Knip & föhnebehandelingen</h3>
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Heren knippen <strong>€13,50</strong>
+                Heren knippen <div><s>€13,50</s> <strong>€16,00</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Dames knippen <strong>€15,00</strong>
+                Dames knippen <div><s>€15,00</s> <strong>€17,50</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Dames knippen lang haar <strong>€17,50</strong>
+                Dames knippen lang haar <div><s>€17,50</s> <strong>€20,00</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Kinderen tot 12 jaar <strong>€10,00</strong>
+                Kinderen tot 12 jaar <div><s>€10,00</s> <strong>€12,50</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Model föhnen  <strong>v.a. €15,00</strong>
+                Model föhnen <div><strong>v.a.</strong> <s>€15,00</s> <strong>€17,50</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Tondeuse <strong>€10,00</strong>
+                Tondeuse <div><s>€10,00</s> <strong>€12,50</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Pony knippen <strong>€5,00</strong>
+                Pony knippen <div><s>€5,00</s> <strong>€7,50</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Watergolf <strong>€22,50</strong>
+                Watergolf <div><s>€22,50</s> <strong>€25,00</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wassen, knippen en föhnen <strong>v.a. €22,50</strong>
+                Wassen, knippen en föhnen <div><strong>v.a.</strong> <s>€22,50</s> <strong>€25,00</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Permanenten <small>incl. knippen & föhnen, of watergolf</small> <strong>v.a. €49,50</strong>
+                Permanenten <small>incl. knippen & föhnen, of watergolf</small> <div><strong>v.a.</strong> <s>€49,50</s> <strong>€52,00</strong></div>
               </li>
             </ul>
-					</div>
-					<div class="col-lg-6">
+			</div>
+			<div class="col-lg-6 mt-2">
             <h3 class="">Kleurbehandelingen</h3>
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Uitgroei (tot 3 cm) <strong>€25,00</strong>
+                Uitgroei (tot 3 cm) <div><s>€25,00</s> <strong>€27,50</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Uitgroei incl. kleur opfrissen <strong>€32,50</strong>
+                Uitgroei incl. kleur opfrissen <div><s>€32,50</s> <strong>€35,00</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Gehele kleuring <strong>v.a. €35,00</strong>
+                Gehele kleuring <div><strong>v.a.</strong> <s>€35,00</s> <strong>€37,50</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Verfspoeling deelkleuring <strong>v.a. €17,50</strong>
+                Verfspoeling deelkleuring <div><strong>v.a.</strong> <s>€17,50</s> <strong>€20,00</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Highlights/lowlights kam/spatel <strong>v.a. €15,00</strong>
+                Highlights/lowlights kam/spatel <div><strong>v.a.</strong> <s>€15,00</s> <strong>€17,50</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Highlights/lowlights folie <strong>v.a. €25,00</strong>
+                Highlights/lowlights folie <div><strong>v.a.</strong> <s>€25,00</s> <strong>€27,50</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Balayage <strong>v.a. €50,00</strong>
+                Balayage <div><strong>v.a.</strong> <s>€50,00</s> <strong>€52,50</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wenkbrauwen verven <strong>€5,00</strong>
+                Wenkbrauwen verven <div><s>€5,00</s> <strong>€7,50</strong></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wenkbrauwen epileren en verven <strong>€7,50</strong>
+                Wenkbrauwen epileren en verven <div><s>€7,50</s> <strong>€10,00</strong></div>
               </li>
             </ul>
 					</div>
