@@ -85,11 +85,12 @@
 	<section id="intro">
 		<div class="jumbotron text-white intro-container fadeIn ">
 			<div class="container text-center mt-5">
-				<div class="row justify-content-center">
+				<!--<div class="row justify-content-center">
 					<div class="col-md-6 mb-1">
 						<strong><mark>I.v.m. COVID-19 werken wij met strikte voorzorgsmaatregelen.</strong>
 					</div>
-				</div>
+				</div>-->
+				
 				<div class="text-center">
 					<img src="img/logo.png" alt="Jouwkapper">
 					<h1>Welkom bij<br><span>jouw</span> kapper.</h1>
@@ -151,11 +152,11 @@
 			  <h2>Diensten</h2>
 			</div>
 			
-			<div class="row justify-content-center mb-2">
+			<!--<div class="row justify-content-center mb-2">
 				<div class="col-lg-6">
 					<strong><mark>I.v.m. alle voorzorgsmaatregelen van COVID-19 voor onze hygiëne en veiligheid zijn alle prijzen omhoog gegaan.</strong>
 				</div>
-			</div>
+			</div>-->
 				
 			<div class="row justify-content-center">
 			<div class="col-lg-6 mt-2">
