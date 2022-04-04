@@ -105,7 +105,7 @@
 				<div class="row justify-content-center">
 					<div class="col-md-5">
 						<div class="card mt-4">
-						  <video   controls autoplay>
+						  <video controls>
 							<source src="img/finnleys.mp4" type="video/mp4">
 							Sorry, your browser doesn't support the video element.
 						  </video>
