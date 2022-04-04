@@ -272,7 +272,7 @@
       <div class="container gallery-wrapper">
         <div class="owl-carousel gallery-carousel">
           <?php
-            for ($x = 12; $x > 0; $x--) {
+            for ($x = 16; $x > 0; $x--) {
                 echo '<a href="img/gallery/'.$x.'.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/'.$x.'.jpg" alt=""></a>';
             }
           ?>
