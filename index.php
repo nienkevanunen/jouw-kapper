@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Jouw Kapper</title>
+  <title>Jouw Kapper - Monnickendam</title>
+  <meta content="Met al meer dan 20 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak." name="description">
+  <meta content="jouw kapper monnickendam waterland finnleys haircosmetics haarkleuren haarkleur knippen fohnen kleurbehandeling knip heren dames kinderen model tondeuse pony watergolf wassen permanenten uitgroei kleuring highlights verfspoeling deelkleuring balayage wenkbrauwen epileren verven opfrissen ervaring inspiratie flexibiliteit vak flexibel vrouw moeder werk feest bruiloft bruid arrangementen make-up haar nagels doneren gratis" name="keywords">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
 
   <!-- Favicons -->
   <link href="img/favicon.ico" rel="icon">
@@ -59,7 +59,7 @@
 
       <div id="logo" class="pull-left">
         <!-- Uncomment below if you prefer to use a text logo -->
-        <h1><img src="img/logo.png" alt="Jouwkapper"><div class="d-none d-sm-inline ml-2"><a href="/"><span>Jouw</span>kapper</a></div></h1>
+        <h1><img src="img/logo.png" alt="Jouw-kapper"><div class="d-none d-sm-inline ml-2"><a href="/"><span>Jouw</span>kapper</a></div></h1>
       </div>
 
       <nav id="nav-menu-container">
@@ -107,9 +107,10 @@
 						<div class="card mt-4">
 						  <video controls>
 							<source src="img/finnleys.mp4" type="video/mp4">
-							Sorry, your browser doesn't support the video element.
+							Sorry, jouw browser ondersteunt geen video elementen.
 						  </video>
 						</div>
+						<div class="card-text small">Partner van <a href="https://www.finnleys.eu/">Finnley's Haircosmetics</a>.</div>
 					</div>
 				</div>
 		  
