@@ -96,7 +96,7 @@
 				</div>
 				<div class="row justify-content-center">
 					<div class="col-md-6">
-						Ik ben Marielle. Met al meer dan 15 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.
+						Ik ben Marielle. Met al meer dan 20 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.
 					</div>
 				</div>
 			<!--<a href="#diensten" class="about-btn scrollto">Meer informatie</a>	-->
@@ -476,7 +476,7 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <img src="img/logo.png" alt="Jouwkapper">
-            <p>Ik ben Marielle. Met al meer dan 15 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.</p>
+            <p>Ik ben Marielle. Met al meer dan 20 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
