@@ -110,7 +110,7 @@
 							Sorry, jouw browser ondersteunt geen video elementen.
 						  </video>
 						</div>
-						<div class="card-text small">Partner van <a href="https://www.finnleys.eu/">Finnley's Haircosmetics</a>.</div>
+						<div class="card-text small">Partner van <a href="https://www.finnleys.eu/" target="_blank">Finnley's Haircosmetics</a>.</div>
 					</div>
 				</div>
 		  
