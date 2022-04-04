@@ -86,7 +86,7 @@
 		<div class="jumbotron text-white intro-container fadeIn ">
 			<div class="container text-center mt-5">
 				<div class="row justify-content-center">
-					<div class="col-sm-5">
+					<div class="col-md-6 mb-1">
 						<strong><mark>I.v.m. COVID-19 werken wij met strikte voorzorgsmaatregelen.</strong>
 					</div>
 				</div>
@@ -95,11 +95,23 @@
 					<h1>Welkom bij<br><span>jouw</span> kapper.</h1>
 				</div>
 				<div class="row justify-content-center">
-					<div class="col-sm-5">
+					<div class="col-md-6">
 						Ik ben Marielle. Met al meer dan 15 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.
 					</div>
 				</div>
-			<a href="#diensten" class="about-btn scrollto">Meer informatie</a>				
+			<!--<a href="#diensten" class="about-btn scrollto">Meer informatie</a>	-->
+
+				<div class="row justify-content-center">
+					<div class="col-md-5">
+						<div class="card mt-4">
+						  <video   controls autoplay>
+							<source src="img/finnleys.mp4" type="video/mp4">
+							Sorry, your browser doesn't support the video element.
+						  </video>
+						</div>
+					</div>
+				</div>
+		  
 			</div><!-- /.container   -->
 			
 			</div> <!-- jumbotron -->
@@ -295,6 +307,8 @@
               </div>
             </div>
           </div>
+		  
+
         </div>
       </div>
 
