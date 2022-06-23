@@ -78,8 +78,8 @@
   <!--==========================
     Intro Section
   ============================-->
-  
-	
+
+
 
 
 	<section id="intro">
@@ -90,7 +90,7 @@
 						<strong><mark>I.v.m. COVID-19 werken wij met strikte voorzorgsmaatregelen.</strong>
 					</div>
 				</div>-->
-				
+
 				<div class="text-center">
 					<img src="img/logo.png" alt="Jouwkapper">
 					<h1>Welkom bij<br><span>jouw</span> kapper.</h1>
@@ -113,9 +113,9 @@
 						<div class="card-text small">Partner van <a href="https://www.finnleys.eu/" target="_blank">Finnley's Haircosmetics</a>.</div>
 					</div>
 				</div>
-		  
+
 			</div><!-- /.container   -->
-			
+
 			</div> <!-- jumbotron -->
 	</section>
 
@@ -152,13 +152,13 @@
 			<div class="section-header">
 			  <h2>Diensten</h2>
 			</div>
-			
+
 			<!--<div class="row justify-content-center mb-2">
 				<div class="col-lg-6">
 					<strong><mark>I.v.m. alle voorzorgsmaatregelen van COVID-19 voor onze hygiëne en veiligheid zijn alle prijzen omhoog gegaan.</strong>
 				</div>
 			</div>-->
-				
+
 			<div class="row justify-content-center">
 			<div class="col-lg-6 mt-2">
             <h3>Knip & föhnebehandelingen</h3>
@@ -309,7 +309,7 @@
               </div>
             </div>
           </div>
-		  
+
 
         </div>
       </div>
@@ -430,7 +430,7 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3><i class="fa fa-pencil"></i></h3>
-              <p><a href="mailto:mariellewinter86@gmail.com">mariellewinter86@gmail.com</a></p>
+              <p><a href="mailto:info@jouw-kapper.nl">info@jouw-kapper.nl</a></p>
             </div>
           </div>
 
