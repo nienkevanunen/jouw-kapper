@@ -59,7 +59,7 @@
 
       <div id="logo" class="pull-left">
         <!-- Uncomment below if you prefer to use a text logo -->
-        <h1><img src="img/logo.png" alt="Jouw-kapper"><div class="d-none d-sm-inline ml-2"><a href="/"><span>Jouw</span>kapper</a></div></h1>
+        <h1><div class="d-none d-sm-inline ml-2"><a href="/"><span>Jouw</span>kapper</a></div></h1>
       </div>
 
       <nav id="nav-menu-container">
@@ -91,20 +91,26 @@
 					</div>
 				</div>-->
 
-				<div class="text-center">
-					<img src="img/logo.png" alt="Jouwkapper">
-					<h1>Welkom bij<br><span>jouw</span> kapper.</h1>
-				</div>
-				<div class="row justify-content-center">
+
+        <div class="row justify-content-center">
+        	<div class="col-md-6">
+				    <div class="text-center">
+					    <img src="img/logo.png" alt="Jouw Kapper" class="img-fluid">
+					<!--<h1>Welkom bij<br><span>jouw</span> kapper.</h1>-->
+				    </div>
+          </div>
+        </div>
+
+				<div class="row justify-content-center mt-4">
 					<div class="col-md-6">
 						Ik ben Marielle. Met al meer dan 20 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.
-					</div>
+          </div>
 				</div>
 			<!--<a href="#diensten" class="about-btn scrollto">Meer informatie</a>	-->
 
 				<div class="row justify-content-center">
 					<div class="col-md-5">
-						<div class="card mt-4">
+						<div class="card mt-2">
 						  <video controls>
 							<source src="img/finnleys.mp4" type="video/mp4">
 							Sorry, jouw browser ondersteunt geen video elementen.
