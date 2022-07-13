@@ -95,7 +95,7 @@
         <div class="row justify-content-center">
         	<div class="col-md-6 col-lg-4">
 				    <div class="text-center">
-					    <img src="img/logo.png" alt="Jouw Kapper" class="img-fluid">
+					    <img src="img/logo.png?80172489074" alt="Jouw Kapper" class="img-fluid">
 					<!--<h1>Welkom bij<br><span>jouw</span> kapper.</h1>-->
 				    </div>
           </div>
@@ -506,7 +506,7 @@
               1141 JX Monnickendam <br>
               Nederland<br>
               <strong>Mobiel:</strong> (+31) 06 507 472 79<br>
-              <strong>Email:</strong> mariellewinter86@gmail.com<br>
+              <strong>Email:</strong> info@jouw-kapper.nl<br>
             </p>
 
             <div class="social-links">
