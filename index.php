@@ -93,7 +93,7 @@
 
 
         <div class="row justify-content-center">
-        	<div class="col-md-6">
+        	<div class="col-md-6 col-lg-4">
 				    <div class="text-center">
 					    <img src="img/logo.png" alt="Jouw Kapper" class="img-fluid">
 					<!--<h1>Welkom bij<br><span>jouw</span> kapper.</h1>-->
@@ -109,8 +109,8 @@
 			<!--<a href="#diensten" class="about-btn scrollto">Meer informatie</a>	-->
 
 				<div class="row justify-content-center">
-					<div class="col-md-5">
-						<div class="card mt-2">
+					<div class="col-md-7 col-lg-5">
+						<div class="card mt-4">
 						  <video controls>
 							<source src="img/finnleys.mp4" type="video/mp4">
 							Sorry, jouw browser ondersteunt geen video elementen.

@@ -472,7 +472,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro .intro-container {
-	background-image: linear-gradient(to bottom, #5C9996 0%,#173936 100%), url("../img/intro-bg.jpg");
+	background-image: linear-gradient(to bottom, #467D78 0%,#173936 100%), url("../img/intro-bg.jpg");
 	background-size: cover;
 }
 
