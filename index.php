@@ -24,7 +24,7 @@
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css?v=1.0" rel="stylesheet">
+  <link href="css/style.css?v=2.0" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: TheEvent
