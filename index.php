@@ -24,7 +24,7 @@
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css?v=2.0" rel="stylesheet">
+  <link href="css/style.css?v=2.1" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: TheEvent
@@ -85,11 +85,25 @@
 	<section id="intro">
 		<div class="jumbotron text-white intro-container fadeIn ">
 			<div class="container text-center mt-5">
-				<!--<div class="row justify-content-center">
-					<div class="col-md-6 mb-1">
-						<strong><mark>I.v.m. COVID-19 werken wij met strikte voorzorgsmaatregelen.</strong>
-					</div>
-				</div>-->
+				<div class="row justify-content-center">
+
+
+            <?php
+              $today = date('m-d');
+              $start = '10-01';
+              $end = '10-31';
+
+              if ($start <= $today && $end >= $today) {
+                echo
+                '<div class="col-md-8 mb-1">
+                    <div class="alert alert-secondary" role="alert">
+                    <b>Update 02/10/2022</b><br>
+                    We zijn verhuist naar Kalversteeg 2-A!
+                    </div>
+    					   </div>';
+              }
+            ?>
+				</div>
 
 
         <div class="row justify-content-center">
@@ -161,78 +175,85 @@
 
 			<!--<div class="row justify-content-center mb-2">
 				<div class="col-lg-6">
-					<strong><mark>I.v.m. alle voorzorgsmaatregelen van COVID-19 voor onze hygiëne en veiligheid zijn alle prijzen omhoog gegaan.</strong>
+					<b><mark>I.v.m. alle voorzorgsmaatregelen van COVID-19 voor onze hygiëne en veiligheid zijn alle prijzen omhoog gegaan.</b>
 				</div>
 			</div>-->
 
 			<div class="row justify-content-center">
-			<div class="col-lg-6 mt-2">
-            <h3>Knip & föhnebehandelingen</h3>
+			<div class="col-lg-6">
+            <h3 class="mt-4">Knip & föhnebehandelingen</h3>
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Heren knippen <div><strong>€20,50</strong></div>
+                Heren knippen <div><b>€20,50</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Dames knippen <div><strong>€22,00</strong></div>
+                Dames knippen <div><b>€22,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Dames knippen lang haar <div><strong>€24,50</strong></div>
+                Dames knippen lang haar <div><b>€24,50</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Kinderen tot 12 jaar <div><strong>€17,00</strong></div>
+                Kinderen tot 12 jaar <div><b>€17,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Model föhnen <div><strong>v.a.</strong> <strong>€22,00</strong></div>
+                Model föhnen <div><b>v.a.</b> <b>€22,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Tondeuse <div><strong>€17,00</strong></div>
+                Tondeuse <div><b>€17,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Pony knippen <div><strong>€10,00</strong></div>
+                Pony knippen <div><b>€10,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Watergolf <div><strong>€29,50</strong></div>
+                Watergolf <div><b>€29,50</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wassen, knippen en föhnen <div><strong>v.a.</strong> <strong>€29,50</strong></div>
+                Wassen, knippen en föhnen <div><b>v.a.</b> <b>€29,50</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Permanenten <small>incl. knippen & föhnen, of watergolf</small> <div><strong>v.a.</strong> <strong>€56,50</strong></div>
+                Permanenten <small>incl. knippen & föhnen, of watergolf</small> <div><b>v.a.</b> <b>€56,50</b></div>
               </li>
             </ul>
 			</div>
-			<div class="col-lg-6 mt-2">
-            <h3 class="">Kleurbehandelingen</h3>
+			<div class="col-lg-6">
+            <h3 class="mt-4">Kleurbehandelingen</h3>
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Uitgroei (tot 3 cm) <div> <strong>€32,00</strong></div>
+                Uitgroei (tot 3 cm) <div> <b>€32,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Uitgroei incl. kleur opfrissen <div> <strong>€39,50</strong></div>
+                Uitgroei incl. kleur opfrissen <div> <b>€39,50</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Gehele kleuring <div><strong>v.a.</strong> <strong>€42,00</strong></div>
+                Gehele kleuring <div><b>v.a.</b> <b>€42,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Verfspoeling deelkleuring <div><strong>v.a.</strong> <strong>€24,50</strong></div>
+                Verfspoeling deelkleuring <div><b>v.a.</b> <b>€24,50</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Highlights/lowlights kam/spatel <div><strong>v.a.</strong> <strong>€22,00</strong></div>
+                Highlights/lowlights kam/spatel <div><b>v.a.</b> <b>€22,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Highlights/lowlights folie <div><strong>v.a.</strong> <strong>€32,00</strong></div>
+                Highlights/lowlights folie <div><b>v.a.</b> <b>€32,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Balayage <div><strong>v.a.</strong> <strong>€57,00</strong></div>
+                Balayage <div><b>v.a.</b> <b>€57,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wenkbrauwen verven <div> <strong>€12,00</strong></div>
+                Wenkbrauwen verven <div> <b>€12,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wenkbrauwen epileren en verven <div> <strong>€14,50</strong></div>
+                Wenkbrauwen epileren en verven <div> <b>€14,50</b></div>
               </li>
             </ul>
 					</div>
+        </div>
+        <div class="row justify-content-center">
+        <div class="col-md-10">
+          <h3 class="mt-4">Nagelbehandeling <mark class="text-muted">Nieuw!</mark></h3>
+          <img class="img-max float-right" src="img/nails.png"><br>
+          Vanaf 3 oktober 2022 kunt u ook een afspraak maken mij <b>Mel's Luxurynails</b>. <br>
+          Neem contact op (+31 6 28583852) of kom langs!
         </div>
       </div>
     </section>
@@ -252,13 +273,13 @@
 					<div class="col-md-4">
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Ma – Wo <strong>9:00 – 19:00</strong>
+                Ma – Wo <b>9:00 – 19:00</b>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Do – Za <strong>9:00 – 21:00</strong>
+                Do – Za <b>9:00 – 21:00</b>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Zo <strong>Op aanvraag</strong>
+                Zo <b>Op aanvraag</b>
               </li>
             </ul>
 					</div>
@@ -420,7 +441,9 @@
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3><i class="fa fa-home"></i></h3>
-              <address><a target="_blank" href="https://www.google.com/maps/place/Drevel+20,+1141+JX+Monnickendam">Drevel 20, 1141 JX Monnickendam, Nederland</a></address>
+              <address><a target="_blank" href="https://goo.gl/maps/nVC19SeFZfMzkw4E7">
+                Kalversteef 2-A, 1141 SM Monnickendam, Nederland
+              </a></address>
             </div>
           </div>
 
@@ -505,8 +528,8 @@
               Kalversteeg 2-A<br>
               1141 SM Monnickendam <br>
               Nederland<br>
-              <strong>Mobiel:</strong> (+31) 06 507 472 79<br>
-              <strong>Email:</strong> info@jouw-kapper.nl<br>
+              <b>Mobiel:</b> (+31) 06 507 472 79<br>
+              <b>Email:</b> info@jouw-kapper.nl<br>
             </p>
 
             <div class="social-links">
@@ -527,7 +550,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; 2019 <strong>Jouwkapper</strong>. All Rights Reserved. | KvK: 68171390
+        &copy; 2019 <b>Jouwkapper</b>. All Rights Reserved. | KvK: 68171390
       </div>
       <!--<div class="credits">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
