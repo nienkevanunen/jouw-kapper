@@ -240,6 +240,9 @@
                 Balayage <div><b>v.a.</b> <b>€57,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
+                Toner <div><b>v.a.</b> <b>€12,50</b></div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
                 Wenkbrauwen verven <div> <b>€12,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
