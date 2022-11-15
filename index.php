@@ -254,7 +254,7 @@
         <div class="row justify-content-center">
         <div class="col-md-10">
           <h3 class="mt-4">Nagelbehandeling <mark class="text-muted">Nieuw!</mark></h3>
-          <img class="img-max float-right" src="img/nails.png"><br>
+          <img class="img-max float-right" src="img/melsluxurynails.png"><br>
           Vanaf 3 oktober 2022 kunt u ook een afspraak maken bij <b>Mel's Luxury Nails</b>. <br>
           Neem contact op (+31 6 28583852) of kom langs!
         </div>
