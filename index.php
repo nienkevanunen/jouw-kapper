@@ -184,34 +184,34 @@
             <h3 class="mt-4">Knip & föhnebehandelingen</h3>
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Heren knippen <div><b>€20,50</b></div>
+                Heren knippen <!--<div><b>€20,50</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Dames knippen <div><b>€22,00</b></div>
+                Dames knippen <!--<div><b>€22,00</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Dames knippen lang haar <div><b>€24,50</b></div>
+                Dames knippen lang haar <!--<div><b>€24,50</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Kinderen tot 12 jaar <div><b>€17,00</b></div>
+                Kinderen tot 12 jaar <!--<div><b>€17,00</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Model föhnen <div><b>v.a.</b> <b>€22,00</b></div>
+                Model föhnen <!--<div><b>v.a.</b> <b>€22,00</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Tondeuse <div><b>€17,00</b></div>
+                Tondeuse <!--<div><b>€17,00</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Pony knippen <div><b>€10,00</b></div>
+                Pony knippen <!--<div><b>€10,00</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Watergolf <div><b>€29,50</b></div>
+                Watergolf <!--<div><b>€29,50</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wassen, knippen en föhnen <div><b>v.a.</b> <b>€29,50</b></div>
+                Wassen, knippen en föhnen <!--<div><b>v.a.</b> <b>€29,50</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Permanenten <small>incl. knippen & föhnen, of watergolf</small> <div><b>v.a.</b> <b>€56,50</b></div>
+                Permanenten <small>incl. knippen & föhnen, of watergolf</small> <!--<div><b>v.a.</b> <b>€56,50</b></div>-->
               </li>
             </ul>
 			</div>
@@ -219,34 +219,34 @@
             <h3 class="mt-4">Kleurbehandelingen</h3>
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Uitgroei (tot 3 cm) <div> <b>€32,00</b></div>
+                Uitgroei (tot 3 cm) <!--<div> <b>€32,00</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Uitgroei incl. kleur opfrissen <div> <b>€39,50</b></div>
+                Uitgroei incl. kleur opfrissen <!--<div> <b>€39,50</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Gehele kleuring <div><b>v.a.</b> <b>€42,00</b></div>
+                Gehele kleuring <!--<div><b>v.a.</b> <b>€42,00</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Verfspoeling deelkleuring <div><b>v.a.</b> <b>€24,50</b></div>
+                Verfspoeling deelkleuring <!--<div><b>v.a.</b> <b>€24,50</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Highlights/lowlights kam/spatel <div><b>v.a.</b> <b>€22,00</b></div>
+                Highlights/lowlights kam/spatel <!--<div><b>v.a.</b> <b>€22,00</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Highlights/lowlights folie <div><b>v.a.</b> <b>€32,00</b></div>
+                Highlights/lowlights folie <!--<div><b>v.a.</b> <b>€32,00</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Balayage <div><b>v.a.</b> <b>€57,00</b></div>
+                Balayage <!--<div><b>v.a.</b> <b>€57,00</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Toner <div><b>v.a.</b> <b>€12,50</b></div>
+                Toner <!--<div><b>v.a.</b> <b>€12,50</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wenkbrauwen verven <div> <b>€12,00</b></div>
+                Wenkbrauwen verven <!--<div> <b>€12,00</b></div>-->
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wenkbrauwen epileren en verven <div> <b>€14,50</b></div>
+                Wenkbrauwen epileren en verven <!--<div> <b>€14,50</b></div>-->
               </li>
             </ul>
 					</div>
