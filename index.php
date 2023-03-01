@@ -458,7 +458,7 @@
               <i class="ion-ios-location-outline"></i>
               <h3><i class="fa fa-home"></i></h3>
               <address><a target="_blank" href="https://goo.gl/maps/nVC19SeFZfMzkw4E7">
-                Kalversteef 2-A, 1141 SM Monnickendam, Nederland
+                Kalversteeg 2-A<br>1141SM Monnickendam<br>Nederland
               </a></address>
             </div>
           </div>
