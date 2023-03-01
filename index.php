@@ -277,10 +277,22 @@
 					<div class="col-md-4">
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Ma – Wo <b>9:00 – 19:00</b>
+                Maandag <b>9:00 – 13:30</b>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Do – Za <b>9:00 – 21:00</b>
+                Dinsdag <b>9:00 – 17:30</b>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Woensdag <b>9:00 – 17:30</b>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Donderdag <b>9:00 – 17:30</b>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Vrijdag <b>9:00 – 17:30</b>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Zaterdag <b>9:00 – 13:30</b>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Zo <b>Op aanvraag</b>
