@@ -184,10 +184,10 @@
             <h3 class="mt-4">Knip & kleurbehandelingen</h3>
             <ul class="list-group list-group-flush"> 
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wassen, knippen, drogen <div><b>€30,00/b></div>
+                Wassen, knippen, drogen <div><b>€30,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wassen, knippen, föhnen <div><b>€38,50/b></div>
+                Wassen, knippen, föhnen <div><b>€38,50</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Wassen, föhnen <div><b>€25,00</b></div>
@@ -256,7 +256,6 @@
 		            </ul>
 	           </div>
 	       	   </div>
-	    	</div>
         </div>
 	      <!--
         <div class="row justify-content-center">
