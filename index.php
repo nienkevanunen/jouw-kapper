@@ -181,7 +181,9 @@
 	
 		<div class="row justify-content-center">
 		<div class="col-lg-6">
-            <h3 class="mt-4">Knip & kleurbehandelingen</h3>
+       		<div class="row">
+           	<div class='col-md-12 col-xs-12'>
+            <h3 class="mt-4">Knip & föhnbehandelingen</h3>
             <ul class="list-group list-group-flush"> 
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Wassen, knippen, drogen <div><b>€30,00</b></div>
@@ -201,6 +203,31 @@
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Tondeuse <div><b>€20,00</b></div>
               </li>
+            </ul>
+		</div>
+		
+           	<div class='col-md-12 col-xs-12'>
+		            <h3 class="mt-4">Kinderen</h3>
+		            <ul class="list-group list-group-flush">
+		              <li class="list-group-item d-flex justify-content-between align-items-center">
+		                Kinderen t/m 5 jaar <div><b>€15,00</b></div>
+		              </li>
+		              <li class="list-group-item d-flex justify-content-between align-items-center">
+		                Kinderen 6 t/m 13 jaar <div><b>€20,00</b></div>
+		              </li>
+		              <li class="list-group-item d-flex justify-content-between align-items-center">
+		                Kinderen 14 t/m 16 jaar <div><b>€25,00</b></div>
+		              </li>
+		            </ul>
+		</div>
+		</div>
+			
+	    </div>
+	    <div class="col-lg-6">
+		    
+       		<div class="row">
+           	<div class='col-md-12 col-xs-12'>
+			
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Kleuren, föhnen <div><b>€55,00</b></div>
               </li>
@@ -222,26 +249,8 @@
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 2 kleuren (folie), knippen, föhnen <div><b>€105,00</b></div>
               </li>
-            </ul>
-	    </div>
-	    <div class="col-lg-6">
-		    
-       		<div class="row">
-           	<div class='col-md-12 col-xs-12'>
-		            <h3 class="mt-4">Kinderen</h3>
-		            <ul class="list-group list-group-flush">
-		              <li class="list-group-item d-flex justify-content-between align-items-center">
-		                Kinderen t/m 5 jaar <div><b>€15,00</b></div>
-		              </li>
-		              <li class="list-group-item d-flex justify-content-between align-items-center">
-		                Kinderen 6 t/m 13 jaar <div><b>€20,00</b></div>
-		              </li>
-		              <li class="list-group-item d-flex justify-content-between align-items-center">
-		                Kinderen 14 t/m 16 jaar <div><b>€25,00</b></div>
-		              </li>
-		            </ul>
 	           </div>
-	           <div class="CONTENT_B" class='col-md-12 col-xs-12'>
+	           <div class='col-md-12 col-xs-12'>
 		            <h3 class="mt-4">Treatments</h3>
 		            <ul class="list-group list-group-flush">
 		              <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -256,7 +265,9 @@
 		            </ul>
 	           </div>
 	       	   </div>
-        </div>
+        	</div>
+		</div>
+      </div>
 	      <!--
         <div class="row justify-content-center">
         <div class="col-md-10">
