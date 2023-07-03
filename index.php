@@ -228,6 +228,8 @@
        		<div class="row">
            	<div class='col-md-12 col-xs-12'>
 			
+		            <h3 class="mt-4">Kleurbehandelingen</h3>
+		            <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Kleuren, föhnen <div><b>€55,00</b></div>
               </li>
@@ -249,6 +251,7 @@
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 2 kleuren (folie), knippen, föhnen <div><b>€105,00</b></div>
               </li>
+		            </ul>
 	           </div>
 	           <div class='col-md-12 col-xs-12'>
 		            <h3 class="mt-4">Treatments</h3>
