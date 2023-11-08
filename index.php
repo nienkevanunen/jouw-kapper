@@ -26,6 +26,7 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css?v=2.1" rel="stylesheet">
 
+
   <!-- =======================================================
     Theme Name: TheEvent
     Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
@@ -42,6 +43,7 @@
 
     gtag('config', 'UA-157163460-1');
   </script>
+  <script src="https://kit.fontawesome.com/9479742b9e.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -117,7 +119,8 @@
 
 				<div class="row justify-content-center mt-4">
 					<div class="col-md-6">
-						Ik ben Marielle. Met al meer dan 20 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.
+						Ik ben Marielle. Met al meer dan 20 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.<br><br>
+            <a href="https://portal.looppiness.com/jouw-kapper/" target="_blank">Klik hier om een afspraak te maken →</a>
           </div>
 				</div>
 			<!--<a href="#diensten" class="about-btn scrollto">Meer informatie</a>	-->
@@ -130,7 +133,7 @@
 							Sorry, jouw browser ondersteunt geen video elementen.
 						  </video>
 						</div>
-						<div class="card-text small">Partner van <a href="https://www.finnleys.eu/" target="_blank">Finnley's Haircosmetics</a>.</div>
+						<i><div class="card-text small">Partner van <a href="https://www.finnleys.eu/" target="_blank">Finnley's Haircosmetics</a></div></i>
 					</div>
 				</div>
 
@@ -468,7 +471,7 @@
 
         <div class="section-header">
           <h2>Kom in contact</h2>
-          <p>Neem contact met ons op om een afspraak te maken.</p>
+          <p>Om een afspraak te maken, klik <a href="https://portal.looppiness.com/jouw-kapper/" target="_blank">hier</a> of neem contact op.</p>
         </div>
 
         <div class="row contact-info">
