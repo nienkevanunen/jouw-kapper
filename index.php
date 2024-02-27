@@ -119,7 +119,6 @@
 
 				<div class="row justify-content-center mt-4">
 					<div class="col-md-6">
-						Ik ben Marielle. Met al meer dan 20 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.<br><br>
             <a href="https://portal.looppiness.com/jouw-kapper/" target="_blank">Klik hier om een afspraak te maken →</a>
           </div>
 				</div>
