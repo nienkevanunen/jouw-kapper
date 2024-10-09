@@ -95,15 +95,15 @@
               $start = '10-01';
               $end = '10-31';
 
-              if ($start <= $today && $end >= $today) {
-                echo
-                '<div class="col-md-8 mb-1">
-                    <div class="alert alert-secondary" role="alert">
-                    <b>Update 02/10/2022</b><br>
-                    We zijn verhuist naar Kalversteeg 2-A!
-                    </div>
-    					   </div>';
-              }
+              #if ($start <= $today && $end >= $today) {
+              #  echo
+              #  '<div class="col-md-8 mb-1">
+              #      <div class="alert alert-secondary" role="alert">
+              #      <b>Update 02/10/2022</b><br>
+              #      We zijn verhuist naar Kalversteeg 2-A!
+              #      </div>
+    	#				   </div>';
+        #      }
             ?>
 				</div>
 
