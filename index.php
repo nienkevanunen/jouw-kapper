@@ -181,97 +181,131 @@
 			</div>
 		</div>-->
 	
+
+    <!-- left -->
 		<div class="row justify-content-center">
-		<div class="col-lg-6">
-       		<div class="row">
-           	<div class='col-md-12 col-xs-12'>
-            <h3 class="mt-4">Knip & föhnbehandelingen</h3>
-            <ul class="list-group list-group-flush"> 
+      <div class="col-lg-6">
+        <div class="row">
+          <div class='col-md-12 col-xs-12'>
+          <div class="d-flex justify-content-between align-items-center">
+              <h3 class="mt-4">Knip & föhnbehandelingen</h3> 
+              <div class="mt-4 mr-4">vanaf</div>
+          </div>
+          <ul class="list-group list-group-flush"> 
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Wassen, knippen, drogen<div><b>€32,50</b></div></div>
+              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€38,50</div></div></div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Wassen, model föhnen <div><b>€25,00</b></div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Pony knippen <div><b>€7,50</b></div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Heren knippen <div><b>€27,50</b></div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Tondeuse <div><b>€22,00</b></div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Permanenten (inclusief knippen, model föhnen) <div><b>€71,00</b></div>
+            </li>
+
+            <!--<li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Kinderen wassen, knippen, drogen</small> </div>
+              <div class="d-flex justify-content-between align-items-center"><div></div> <div>t/m 5 jaar</div><div><b>€15,00</b></div></div>
+              <div class="d-flex justify-content-between"><div></div> <div>6 t/m 13 jaar</div><div><b>€20,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center"><div></div> <div>14 t/m 16 jaar</div><div><b>€25,00</b></div></div>
+            </li>-->
+          </ul>
+         </div>
+        <div class='col-md-12 col-xs-12'>
+          <div class="d-flex justify-content-between align-items-center">
+            <h3 class="mt-4">Kinderen wassen, knippen, drogen</h3>
+            <div class="mt-4 mr-4">vanaf</div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Kinderen t/m 5 jaar <div><b>€15,00</b></div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Kinderen 6 t/m 13 jaar <div><b>€20,00</b></div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Kinderen 14 t/m 16 jaar <div><b>€25,00</b></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- right -->
+    <div class="col-lg-6">
+      <div class="row">
+        <div class='col-md-12 col-xs-12'>
+          <div class="d-flex justify-content-between align-items-center">
+            <h3 class="mt-4">Kleurbehandelingen</h3>
+            <div class="mt-4 mr-4">vanaf</div>
+          </div>
+          <ul class="list-group list-group-flush">
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Uitgroei kleuren, drogen<div><b>€40,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€55,00</div></div></div>
+            </li>
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Compleet kleuren, drogen<div><b>€45,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€60,00</div></div></div>
+            </li>
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Knippen, kleuren, model föhnen<div><b>€75,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief 2 kleuren</div><div><div class="text-muted">€87,50</div></div></div>
+            </li>
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Toner <div><b>€27,50</b></div></div>
+              <div class="d-flex justify-content-between align-items-center"><small class="text-muted">(tijdens kleurbehandeling)</small><div><small>€17,50</small></div></div>
+            </li>
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Highlights (folie), knippen, model föhnen<div><b>€97,50</b></div></div>
+              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief 2 kleuren</div><div><div class="text-muted">€105,00</div></div></div>
+            </li>
+          </ul>
+          </div>
+          
+          <div class='col-md-12 col-xs-12'>
+            <div class="d-flex justify-content-between align-items-center">
+            <h3 class="mt-4">Treatments</h3>
+              <div class="mt-4 mr-4">vanaf</div>
+            </div>
+            <ul class="list-group list-group-flush">
+
+              <li class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center">Simplex behandeling <div><b>€30,00</b></div></div>
+                <div class="d-flex justify-content-between align-items-center"><small class="text-muted">(tijdens behandeling)</small><div><small>€10,00</small></div></div>
+              </li>
+
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wassen, knippen, drogen <div><b>€30,00</b></div>
+                Defrizz (keratine) behandeling <div><b>€150,00</b></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wassen, knippen, föhnen <div><b>€38,50</b></div>
+                Filltastic (botox) behandeling <div><b>€45,00</b></div>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wassen, föhnen <div><b>€25,00</b></div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Pony knippen <div><b>€7,00</b></div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Heren knippen <div><b>€25,00</b></div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Tondeuse <div><b>€20,00</b></div>
-              </li>
+
             </ul>
-		</div>
-		
-           	<div class='col-md-12 col-xs-12'>
-		            <h3 class="mt-4">Kinderen</h3>
-		            <ul class="list-group list-group-flush">
-		              <li class="list-group-item d-flex justify-content-between align-items-center">
-		                Kinderen t/m 5 jaar <div><b>€15,00</b></div>
-		              </li>
-		              <li class="list-group-item d-flex justify-content-between align-items-center">
-		                Kinderen 6 t/m 13 jaar <div><b>€20,00</b></div>
-		              </li>
-		              <li class="list-group-item d-flex justify-content-between align-items-center">
-		                Kinderen 14 t/m 16 jaar <div><b>€25,00</b></div>
-		              </li>
-		            </ul>
-		</div>
-		</div>
-			
-	    </div>
-	    <div class="col-lg-6">
-		    
-       		<div class="row">
-           	<div class='col-md-12 col-xs-12'>
-			
-		            <h3 class="mt-4">Kleurbehandelingen</h3>
-		            <ul class="list-group list-group-flush">
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Kleuren, föhnen <div><b>€55,00</b></div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Knippen, kleuren, föhnen <div><b>€75,00</b></div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Knippen, 2 kleuren, föhnen <div><b>€87,50</b></div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Toner <div><b>€25,00</b></div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Toner tijdens kleurbehandeling <div><b>€15,00</b></div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Highlights (folie), knippen, föhnen <div><b>€97,50</b></div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                2 kleuren (folie), knippen, föhnen <div><b>€105,00</b></div>
-              </li>
-		            </ul>
-	           </div>
-	           <div class='col-md-12 col-xs-12'>
-		            <h3 class="mt-4">Treatments</h3>
-		            <ul class="list-group list-group-flush">
-		              <li class="list-group-item d-flex justify-content-between align-items-center">
-		                Simplex behandeling <div><b>€27,50</b></div>
-		              </li>
-		              <li class="list-group-item d-flex justify-content-between align-items-center">
-		                Defrizz (keratine) behandeling <!--<div><b>€20,00</b></div>-->
-		              </li>
-		              <li class="list-group-item d-flex justify-content-between align-items-center">
-		                Filltastic (botox) behandeling <!--<div><b>€25,00</b></div>-->
-		              </li>
-		            </ul>
-	           </div>
-	       	   </div>
-        	</div>
-		</div>
+          </div>
+        </div>
+      </div>
+      
+
+		  </div>
       </div>
 	      <!--
         <div class="row justify-content-center">
@@ -282,7 +316,7 @@
           Neem contact op (+31 6 28583852) of kom langs!
         </div>
       </div>-->
-    </section>
+  </section>
 
     <!--==========================
       Schedule Section
