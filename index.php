@@ -570,27 +570,23 @@
 
   <div class="modal fade" id="newLocationModal" tabindex="-1" role="dialog" aria-labelledby="newLocationModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content new-location-modal">
-        <button type="button" class="close new-location-close" data-dismiss="modal" aria-label="Sluiten">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-body">
-          <div class="new-location-eyebrow">Nieuwe locatie</div>
-          <h3 class="new-location-title" id="newLocationModalLabel">We verhuizen!</h3>
-          <p class="lead mb-4">Vanaf <strong>5 januari</strong> verwelkomen we je op onze nieuwe locatie.</p>
-          <div class="new-location-address">
-            <div class="new-location-icon">
-              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-            </div>
-            <div>
-              <div class="new-location-street">'t Prooyen 4</div>
-              <div class="new-location-city">Monnickendam</div>
-            </div>
-          </div>
-          <a class="btn btn-block new-location-btn mt-4" href="https://maps.app.goo.gl/cjxXUmrBQv5VcsKk8" target="_blank" rel="noopener">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title" id="newLocationModalLabel">We verhuizen!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Sluiten">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body pt-2 pb-4">
+          <p class="lead mb-2"><strong>Vanaf 5 januari</strong> verwelkomen we je op onze nieuwe locatie.</p>
+          <p class="mb-3">
+            <strong>'t Prooyen 4</strong><br>
+            Monnickendam
+          </p>
+          <a class="btn btn-block new-location-btn" href="https://maps.app.goo.gl/cjxXUmrBQv5VcsKk8" target="_blank" rel="noopener">
             Bekijk route op Google Maps
           </a>
-          <p class="new-location-note mt-4 mb-0">Tot snel op onze nieuwe plek!</p>
+          <small class="text-muted d-block mt-3">Tot snel op onze nieuwe plek!</small>
         </div>
       </div>
     </div>
