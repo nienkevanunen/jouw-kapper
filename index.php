@@ -580,10 +580,10 @@
         <div class="modal-body pt-2 pb-4">
           <p class="lead mb-2"><strong>Vanaf 5 januari</strong> verwelkomen we je op onze nieuwe locatie.</p>
           <p class="mb-3">
-            <strong>Prooyen 4</strong><br>
+            <strong>'t Prooyen 4</strong><br>
             Monnickendam
           </p>
-          <a class="btn btn-primary btn-block" href="https://maps.app.goo.gl/cjxXUmrBQv5VcsKk8" target="_blank" rel="noopener">
+          <a class="btn btn-block new-location-btn" href="https://maps.app.goo.gl/cjxXUmrBQv5VcsKk8" target="_blank" rel="noopener">
             Bekijk route op Google Maps
           </a>
           <small class="text-muted d-block mt-3">Tot snel op onze nieuwe plek!</small>

@@ -1283,6 +1283,25 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #E2983D;
 }
 
+#newLocationModal .new-location-btn {
+  background-color: #E2983D;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 12px 35px;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 8px 20px rgba(19, 48, 45, 0.2);
+}
+
+#newLocationModal .new-location-btn:hover,
+#newLocationModal .new-location-btn:focus {
+  background-color: #cf8430;
+  color: #fff;
+}
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
