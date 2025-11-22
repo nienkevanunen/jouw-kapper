@@ -568,6 +568,30 @@
 
   </main>
 
+  <div class="modal fade" id="newLocationModal" tabindex="-1" role="dialog" aria-labelledby="newLocationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title" id="newLocationModalLabel">We verhuizen!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Sluiten">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body pt-2 pb-4">
+          <p class="lead mb-2"><strong>Vanaf 5 januari</strong> verwelkomen we je op onze nieuwe locatie.</p>
+          <p class="mb-3">
+            <strong>Prooyen 4</strong><br>
+            Monnickendam
+          </p>
+          <a class="btn btn-primary btn-block" href="https://maps.app.goo.gl/cjxXUmrBQv5VcsKk8" target="_blank" rel="noopener">
+            Bekijk route op Google Maps
+          </a>
+          <small class="text-muted d-block mt-3">Tot snel op onze nieuwe plek!</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!--==========================
     Footer
@@ -648,6 +672,43 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var modal = $('#newLocationModal');
+      if (!modal.length) {
+        return;
+      }
+
+      var storageKey = 'jkNewLocationPopupDismissedAt';
+      var shouldShow = true;
+
+      try {
+        var lastDismissed = localStorage.getItem(storageKey);
+        if (lastDismissed) {
+          var last = parseInt(lastDismissed, 10);
+          if (!isNaN(last) && (Date.now() - last) <= 24 * 60 * 60 * 1000) {
+            shouldShow = false;
+          }
+        }
+      } catch (error) {
+        // localStorage unavailable, continue with default behavior
+      }
+
+      if (shouldShow) {
+        $(window).on('load', function () {
+          modal.modal('show');
+        });
+      }
+
+      modal.on('hidden.bs.modal', function () {
+        try {
+          localStorage.setItem(storageKey, Date.now().toString());
+        } catch (error) {
+          // Ignore write errors so popup can still close gracefully
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>
