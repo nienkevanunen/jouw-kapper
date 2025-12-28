@@ -241,6 +241,10 @@
               Pony knippen <div><b>€10,00</b></div>
             </li>
 
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Tondeuse <div><b>€24,50</b></div>
+            </li>
+
             <li class="list-group-item">
               <div class="d-flex justify-content-between align-items-center">Krullen knippen basis<div><b>€40,00</b></div></div>
             </li>
@@ -263,6 +267,9 @@
 
             <li class="list-group-item">
               <div class="d-flex justify-content-between align-items-center"><strong>Permanent</strong><div></div></div>
+              <div class="d-flex justify-content-between align-items-center">Kort<div><b>€85,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Middel<div><b>€95,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Lang<div><b>€115,00</b></div></div>
               <small class="text-muted">
                 <ul style="margin-bottom: 0; padding-left: 1.5rem;">
                   <li>Incl. thuisverzorging pakket</li>
@@ -270,9 +277,6 @@
                   <li>Incl. advies voor onderhoud en styling</li>
                 </ul>
               </small>
-              <div class="d-flex justify-content-between align-items-center">Kort<div><b>€85,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Middel<div><b>€95,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Lang<div><b>€115,00</b></div></div>
             </li>
 
           </ul>
