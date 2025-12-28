@@ -79,7 +79,27 @@
 
   <!--==========================
     Intro Section
-  ============================-->
+    ============================-->
+
+<?php
+  // Determine which address to show based on date
+  $today = new DateTime();
+  $switchDate = new DateTime('2026-01-01'); // Switch to new address on Jan 1st
+  
+  if ($today >= $switchDate) {
+    // New address from Jan 1st onwards
+    $address = "'t Prooyen 4";
+    $addressLine2 = "Monnickendam";
+    $addressFull = "'t Prooyen 4<br>Monnickendam<br>Nederland";
+    $mapsLink = "https://maps.app.goo.gl/cjxXUmrBQv5VcsKk8";
+  } else {
+    // Old address before Jan 1st
+    $address = "Kalversteeg 2-A";
+    $addressLine2 = "1141 SM Monnickendam";
+    $addressFull = "Kalversteeg 2-A<br>1141SM Monnickendam<br>Nederland";
+    $mapsLink = "https://goo.gl/maps/nVC19SeFZfMzkw4E7";
+  }
+?>
 
 
 
@@ -194,33 +214,67 @@
           <ul class="list-group list-group-flush"> 
 
             <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Wassen, knippen, drogen<div><b>€32,50</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Knippen kort<div><b>€33,50</b></div></div>
               <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€38,50</div></div></div>
             </li>
 
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Wassen, model föhnen <div><b>€25,00</b></div>
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Knippen middel<div><b>€37,50</b></div></div>
+              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€42,50</div></div></div>
             </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Pony knippen <div><b>€7,50</b></div>
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Knippen lang<div><b>€41,50</b></div></div>
+              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€46,50</div></div></div>
             </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Heren knippen <div><b>€27,50</b></div>
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Knippen extra lang<div><b>€45,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€50,00</div></div></div>
             </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Tondeuse <div><b>€22,00</b></div>
+
+            <li class="list-group-item">
+              <small class="text-muted">Elke knipbeurt is met droog föhnen</small>
             </li>
 
             <li class="list-group-item d-flex justify-content-between align-items-center">
-              Permanenten (inclusief knippen, model föhnen) <div><b>€71,00</b></div>
+              Pony knippen <div><b>€10,00</b></div>
             </li>
 
-            <!--<li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Kinderen wassen, knippen, drogen</small> </div>
-              <div class="d-flex justify-content-between align-items-center"><div></div> <div>t/m 5 jaar</div><div><b>€15,00</b></div></div>
-              <div class="d-flex justify-content-between"><div></div> <div>6 t/m 13 jaar</div><div><b>€20,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center"><div></div> <div>14 t/m 16 jaar</div><div><b>€25,00</b></div></div>
-            </li>-->
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Krullen knippen basis<div><b>€40,00</b></div></div>
+            </li>
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Krullen knippen plus<div><b>€55,00</b></div></div>
+            </li>
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Krullen knippen premium<div><b>€65,00</b></div></div>
+            </li>
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center"><strong>Blow out</strong><div></div></div>
+              <div class="d-flex justify-content-between align-items-center">Kort<div><b>€25,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Middel<div><b>€30,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Lang<div><b>€35,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Extra lang<div><b>€40,00</b></div></div>
+            </li>
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center"><strong>Permanent</strong><div></div></div>
+              <small class="text-muted">
+                <ul style="margin-bottom: 0; padding-left: 1.5rem;">
+                  <li>Incl. thuisverzorging pakket</li>
+                  <li>Incl. nabehandeling na 2 dagen in de salon</li>
+                  <li>Incl. advies voor onderhoud en styling</li>
+                </ul>
+              </small>
+              <div class="d-flex justify-content-between align-items-center">Kort<div><b>€85,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Middel<div><b>€95,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Lang<div><b>€115,00</b></div></div>
+            </li>
+
           </ul>
          </div>
         <div class='col-md-12 col-xs-12'>
@@ -230,13 +284,16 @@
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-between align-items-center">
-              Kinderen t/m 5 jaar <div><b>€15,00</b></div>
+              Knippen 0 t/m 4 jaar <div><b>€18,00</b></div>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
-              Kinderen 6 t/m 13 jaar <div><b>€20,00</b></div>
+              Knippen 5 t/m 8 jaar <div><b>€22,00</b></div>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
-              Kinderen 14 t/m 16 jaar <div><b>€25,00</b></div>
+              Knippen 9 t/m 12 jaar <div><b>€26,00</b></div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Knippen 13 t/m 15 jaar <div><b>€30,00</b></div>
             </li>
           </ul>
         </div>
@@ -254,29 +311,47 @@
           <ul class="list-group list-group-flush">
 
             <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Uitgroei kleuren, drogen<div><b>€40,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€55,00</div></div></div>
+              <div class="d-flex justify-content-between align-items-center">Uitgroei kleuren vanaf<div><b>€45,00</b></div></div>
             </li>
 
             <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Compleet kleuren, drogen<div><b>€45,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€60,00</div></div></div>
+              <div class="d-flex justify-content-between align-items-center"><strong>Full color</strong><div></div></div>
+              <div class="d-flex justify-content-between align-items-center">Kort<div><b>€50,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Middel<div><b>€55,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Lang<div><b>€60,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Extra lang<div><b>€65,00</b></div></div>
+              <small class="text-muted">80 cc in totaal. Bij extra bijmaak €4,50</small>
             </li>
 
             <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Knippen, kleuren, model föhnen<div><b>€75,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief 2 kleuren</div><div><div class="text-muted">€87,50</div></div></div>
+              <div class="d-flex justify-content-between align-items-center">Highlights ALL (Spatel/Kam)<div><b>€45,00</b></div></div>
             </li>
 
             <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Toner <div><b>€27,50</b></div></div>
-              <div class="d-flex justify-content-between align-items-center"><small class="text-muted">(tijdens kleurbehandeling)</small><div><small>€17,50</small></div></div>
+              <div class="d-flex justify-content-between align-items-center"><strong>Highlights - Middel</strong><div></div></div>
+              <div class="d-flex justify-content-between align-items-center">Half<div><b>€75,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Full<div><b>€95,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Faceframe<div><b>€30,00</b></div></div>
             </li>
 
             <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Highlights (folie), knippen, model föhnen<div><b>€97,50</b></div></div>
-              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief 2 kleuren</div><div><div class="text-muted">€105,00</div></div></div>
+              <div class="d-flex justify-content-between align-items-center"><strong>Highlights - Lang</strong><div></div></div>
+              <div class="d-flex justify-content-between align-items-center">Half<div><b>€80,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Full<div><b>€100,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Faceframe<div><b>€35,00</b></div></div>
             </li>
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center"><strong>Highlights - Extra lang</strong><div></div></div>
+              <div class="d-flex justify-content-between align-items-center">Half<div><b>€85,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Full<div><b>€105,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Faceframe<div><b>€40,00</b></div></div>
+            </li>
+
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">Balayage<div><b>In overleg</b></div></div>
+            </li>
+
           </ul>
           </div>
           
@@ -513,8 +588,8 @@
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3><i class="fa fa-home"></i></h3>
-              <address><a target="_blank" href="https://goo.gl/maps/nVC19SeFZfMzkw4E7">
-                Kalversteeg 2-A<br>1141SM Monnickendam<br>Nederland
+              <address><a target="_blank" href="<?php echo $mapsLink; ?>">
+                <?php echo $addressFull; ?>
               </a></address>
             </div>
           </div>
@@ -621,15 +696,15 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact</h4>
             <p>
-              Kalversteeg 2-A<br>
-              1141 SM Monnickendam <br>
+              <?php echo $address; ?><br>
+              <?php echo $addressLine2; ?><br>
               Nederland<br>
               <b>Mobiel:</b> (+31) 06 507 472 79<br>
               <b>Email:</b> info@jouw-kapper.nl<br>
             </p>
 
             <div class="social-links">
-              <a href="https://www.facebook.com/Jouw-kapper-245623526155098/" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100063615640789" class="facebook"><i class="fa fa-facebook"></i></a>
               <!--<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
               <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>-->
               <!--<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
@@ -638,7 +713,14 @@
 
           </div>
 
-          <div class="fb-page" data-href="https://www.facebook.com/Jouw-kapper-245623526155098/" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Jouw-kapper-245623526155098/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Jouw-kapper-245623526155098/">Jouw-kapper</a></blockquote></div>
+          <div class="col-lg-3 col-md-6">
+            <h4>Facebook</h4>
+            <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100063615640789" data-tabs="timeline" data-width="320" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/profile.php?id=100063615640789" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/profile.php?id=100063615640789">Jouw Kapper</a>
+              </blockquote>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -677,6 +759,13 @@
       var modal = $('#newLocationModal');
       if (!modal.length) {
         return;
+      }
+
+      // Stop showing popup after January 10, 2026
+      var today = new Date();
+      var stopDate = new Date(2026, 0, 10); // January 10, 2026 (month is 0-indexed)
+      if (today > stopDate) {
+        return; // Don't show popup after Jan 10, 2026
       }
 
       var storageKey = 'jkNewLocationPopupDismissedAt';
