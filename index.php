@@ -208,28 +208,28 @@
         <div class="row">
           <div class='col-md-12 col-xs-12'>
           <div class="d-flex justify-content-between align-items-center">
-              <h3 class="mt-4">Knip & föhnbehandelingen</h3> 
+              <h3 class="mt-4">Knippen Unisex</h3> 
               <div class="mt-4 mr-4">vanaf</div>
           </div>
           <ul class="list-group list-group-flush"> 
 
             <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Knippen kort<div><b>€33,50</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Wassen en knippen - kort<div><b>€33,50</b></div></div>
               <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€38,50</div></div></div>
             </li>
 
             <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Knippen middel<div><b>€37,50</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Wassen en knippen - middel<div><b>€37,50</b></div></div>
               <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€42,50</div></div></div>
             </li>
 
             <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Knippen lang<div><b>€41,50</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Wassen en knippen - lang<div><b>€41,50</b></div></div>
               <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€46,50</div></div></div>
             </li>
 
             <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Knippen extra lang<div><b>€45,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Wassen en knippen - extra lang<div><b>€45,00</b></div></div>
               <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€50,00</div></div></div>
             </li>
 
@@ -246,15 +246,10 @@
             </li>
 
             <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Krullen knippen basis<div><b>€40,00</b></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Krullen knippen plus<div><b>€55,00</b></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Krullen knippen premium<div><b>€65,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center"><strong>Krullen knippen</strong><div></div></div>
+              <div class="d-flex justify-content-between align-items-center">Basis<div><b>€40,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Plus<div><b>€55,00</b></div></div>
+              <div class="d-flex justify-content-between align-items-center">Premium<div><b>€65,00</b></div></div>
             </li>
 
             <li class="list-group-item">
@@ -283,7 +278,7 @@
          </div>
         <div class='col-md-12 col-xs-12'>
           <div class="d-flex justify-content-between align-items-center">
-            <h3 class="mt-4">Kinderen wassen, knippen, drogen</h3>
+            <h3 class="mt-4">Knippen Kinderen</h3>
             <div class="mt-4 mr-4">vanaf</div>
           </div>
           <ul class="list-group list-group-flush">
