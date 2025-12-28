@@ -238,10 +238,6 @@
             </li>
 
             <li class="list-group-item d-flex justify-content-between align-items-center">
-              Pony knippen <div><b>€10,00</b></div>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-center">
               Tondeuse <div><b>€24,50</b></div>
             </li>
 
@@ -293,6 +289,10 @@
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Knippen 13 t/m 15 jaar <div><b>€30,00</b></div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Pony knippen <div><b>€10,00</b></div>
             </li>
           </ul>
         </div>
