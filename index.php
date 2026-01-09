@@ -83,22 +83,22 @@
 
 <?php
   // Determine which address to show based on date
-  $today = new DateTime();
-  $switchDate = new DateTime('2026-01-01'); // Switch to new address on Jan 1st
+  //$today = new DateTime();
+  //$switchDate = new DateTime('2026-01-01'); // Switch to new address on Jan 1st
   
-  if ($today >= $switchDate) {
+  //if ($today >= $switchDate) {
     // New address from Jan 1st onwards
     $address = "'t Prooyen 4";
     $addressLine2 = "Monnickendam";
     $addressFull = "'t Prooyen 4<br>Monnickendam<br>Nederland";
-    $mapsLink = "https://maps.app.goo.gl/cjxXUmrBQv5VcsKk8";
-  } else {
+    $mapsLink = "https://maps.app.goo.gl/vmMJbsUXsttWDWAx7";
+  //} else {
     // Old address before Jan 1st
-    $address = "Kalversteeg 2-A";
-    $addressLine2 = "1141 SM Monnickendam";
-    $addressFull = "Kalversteeg 2-A<br>1141SM Monnickendam<br>Nederland";
-    $mapsLink = "https://goo.gl/maps/nVC19SeFZfMzkw4E7";
-  }
+  //  $address = "Kalversteeg 2-A";
+  //  $addressLine2 = "1141 SM Monnickendam";
+  //  $addressFull = "Kalversteeg 2-A<br>1141SM Monnickendam<br>Nederland";
+  //  $mapsLink = "https://goo.gl/maps/nVC19SeFZfMzkw4E7";
+  //}
 ?>
 
 
@@ -657,7 +657,7 @@
             <strong>'t Prooyen 4</strong><br>
             Monnickendam
           </p>
-          <a class="btn btn-block new-location-btn" href="https://maps.app.goo.gl/cjxXUmrBQv5VcsKk8" target="_blank" rel="noopener">
+          <a class="btn btn-block new-location-btn" href="https://maps.app.goo.gl/vmMJbsUXsttWDWAx7" target="_blank" rel="noopener">
             Bekijk route op Google Maps
           </a>
           <small class="text-muted d-block mt-3">Tot snel op onze nieuwe plek!</small>
