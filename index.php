@@ -82,23 +82,25 @@
     ============================-->
 
 <?php
+  $today = new DateTime();
+
   // Determine which address to show based on date
-  //$today = new DateTime();
-  //$switchDate = new DateTime('2026-01-01'); // Switch to new address on Jan 1st
-  
-  //if ($today >= $switchDate) {
-    // New address from Jan 1st onwards
+  $addressSwitchDate = new DateTime('2026-01-01');
+  if ($today >= $addressSwitchDate) {
     $address = "'t Prooyen 4";
     $addressLine2 = "Monnickendam";
     $addressFull = "'t Prooyen 4<br>Monnickendam<br>Nederland";
     $mapsLink = "https://maps.app.goo.gl/vmMJbsUXsttWDWAx7";
-  //} else {
-    // Old address before Jan 1st
-  //  $address = "Kalversteeg 2-A";
-  //  $addressLine2 = "1141 SM Monnickendam";
-  //  $addressFull = "Kalversteeg 2-A<br>1141SM Monnickendam<br>Nederland";
-  //  $mapsLink = "https://goo.gl/maps/nVC19SeFZfMzkw4E7";
-  //}
+  } else {
+    $address = "Kalversteeg 2-A";
+    $addressLine2 = "1141 SM Monnickendam";
+    $addressFull = "Kalversteeg 2-A<br>1141SM Monnickendam<br>Nederland";
+    $mapsLink = "https://goo.gl/maps/nVC19SeFZfMzkw4E7";
+  }
+
+  // Zaterdag openingstijden: vanaf 29 maart tot 16:30
+  $zaterdagSwitchDate = new DateTime('2026-03-29');
+  $zaterdagSluit = ($today >= $zaterdagSwitchDate) ? '16:30' : '13:30';
 ?>
 
 
@@ -416,13 +418,13 @@
                 Woensdag <b>9:00 – 17:30</b>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Donderdag <b>9:00 – 17:30</b>
+                Donderdag <b>9:00 – 20:00</b>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Vrijdag <b>9:00 – 17:30</b>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Zaterdag <b>9:00 – 13:30</b>
+                Zaterdag <b>9:00 – <?php echo $zaterdagSluit; ?></b>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Zo <b>Op aanvraag</b>
