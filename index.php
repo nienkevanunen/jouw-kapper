@@ -43,7 +43,7 @@
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css?v=2.1" rel="stylesheet">
+  <link href="css/style.css?v=2.2" rel="stylesheet">
 
 
   <!-- =======================================================
