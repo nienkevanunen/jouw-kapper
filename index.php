@@ -43,7 +43,7 @@
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css?v=2.2" rel="stylesheet">
+  <link href="css/style.css?v=2.3" rel="stylesheet">
 
 
   <!-- =======================================================
@@ -102,54 +102,39 @@
     ============================-->
 
 	<section id="intro">
-		<div class="jumbotron text-white intro-container fadeIn ">
-			<div class="container text-center mt-5">
-				<div class="row justify-content-center">
-
-
-            <?php
-              $today = date('m-d');
-              $start = '10-01';
-              $end = '10-31';
-
-              #if ($start <= $today && $end >= $today) {
-              #  echo
-              #  '<div class="col-md-8 mb-1">
-              #      <div class="alert alert-secondary" role="alert">
-              #      <b>Update 02/10/2022</b><br>
-              #      We zijn verhuist naar Kalversteeg 2-A!
-              #      </div>
-    	#				   </div>';
-        #      }
-            ?>
-				</div>
-
-
-        <div class="row justify-content-center">
-        	<div class="col-md-6 col-lg-4">
-				    <div class="text-center">
-					    <img src="img/logo.png?80172489074" alt="<?php echo htmlspecialchars(content_text($pageText, 'intro.logoAlt', 'Jouw Kapper')); ?>" class="img-fluid">
-					<!--<h1>Welkom bij<br><span>jouw</span> kapper.</h1>-->
-				    </div>
-          </div>
-        </div>
-
-				<div class="row justify-content-center mt-4">
-					<div class="col-md-6">
-            <a href="<?php echo htmlspecialchars($site['bookingUrl'] ?? ''); ?>" target="_blank"><?php echo htmlspecialchars(content_text($pageText, 'intro.bookingLinkText', 'Klik hier om een afspraak te maken →')); ?></a>
-          </div>
-				</div>
-			<!--<a href="#diensten" class="about-btn scrollto">Meer informatie</a>	-->
-
-				<div class="row justify-content-center">
-					<div class="col-md-7 col-lg-5">
-						<div class="card mt-4">
-						  <video controls>
-							<source src="img/finnleys.mp4" type="video/mp4">
-							<?php echo htmlspecialchars(content_text($pageText, 'intro.videoFallback', 'Sorry, jouw browser ondersteunt geen video elementen.')); ?>
-						  </video>
+		<div class="jumbotron text-white intro-container fadeIn">
+			<div class="container">
+				<div class="row align-items-center justify-content-between intro-hero">
+					<div class="col-lg-5">
+						<div class="intro-copy">
+							<img src="img/logo.png?80172489074" alt="<?php echo htmlspecialchars(content_text($pageText, 'intro.logoAlt', 'Jouw Kapper')); ?>" class="img-fluid intro-logo">
+							<p class="intro-lead"><?php echo htmlspecialchars(content_text($pageText, 'meta.description')); ?></p>
+							<div class="intro-actions">
+								<a class="intro-booking" href="<?php echo htmlspecialchars($site['bookingUrl'] ?? ''); ?>" target="_blank" rel="noopener"><?php echo htmlspecialchars(content_text($pageText, 'intro.bookingLinkText', 'Klik hier om een afspraak te maken →')); ?></a>
+							</div>
+							<div class="intro-highlights" aria-label="Salon informatie">
+								<a href="<?php echo htmlspecialchars($mapsLink); ?>" target="_blank" rel="noopener">
+									<span>Locatie</span>
+									<strong><?php echo htmlspecialchars($address); ?></strong>
+								</a>
+								<a href="tel:<?php echo htmlspecialchars($site['phone']['tel'] ?? ''); ?>">
+									<span>Bellen</span>
+									<strong><?php echo htmlspecialchars($site['phone']['display'] ?? ''); ?></strong>
+								</a>
+							</div>
 						</div>
-						<i><div class="card-text small"><?php echo htmlspecialchars(content_text($pageText, 'intro.partnerPrefix', 'Partner van')); ?> <a href="https://www.finnleys.eu/" target="_blank"><?php echo htmlspecialchars(content_text($pageText, 'intro.partnerName', "Finnley's Haircosmetics")); ?></a></div></i>
+					</div>
+
+					<div class="col-lg-6">
+						<div class="intro-media">
+							<div class="card">
+							  <video controls>
+								<source src="img/finnleys.mp4" type="video/mp4">
+								<?php echo htmlspecialchars(content_text($pageText, 'intro.videoFallback', 'Sorry, jouw browser ondersteunt geen video elementen.')); ?>
+							  </video>
+							</div>
+							<div class="card-text small"><i><?php echo htmlspecialchars(content_text($pageText, 'intro.partnerPrefix', 'Partner van')); ?> <a href="https://www.finnleys.eu/" target="_blank" rel="noopener"><?php echo htmlspecialchars(content_text($pageText, 'intro.partnerName', "Finnley's Haircosmetics")); ?></a></i></div>
+						</div>
 					</div>
 				</div>
 
@@ -595,54 +580,10 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="contactform/contactform.js?v=2.1"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-  <script>
-    (function () {
-      var modal = $('#newLocationModal');
-      if (!modal.length) {
-        return;
-      }
-
-      // Stop showing popup after January 10, 2026
-      var today = new Date();
-      var stopDate = new Date(2026, 0, 10); // January 10, 2026 (month is 0-indexed)
-      if (today > stopDate) {
-        return; // Don't show popup after Jan 10, 2026
-      }
-
-      var storageKey = 'jkNewLocationPopupDismissedAt';
-      var shouldShow = true;
-
-      try {
-        var lastDismissed = localStorage.getItem(storageKey);
-        if (lastDismissed) {
-          var last = parseInt(lastDismissed, 10);
-          if (!isNaN(last) && (Date.now() - last) <= 24 * 60 * 60 * 1000) {
-            shouldShow = false;
-          }
-        }
-      } catch (error) {
-        // localStorage unavailable, continue with default behavior
-      }
-
-      if (shouldShow) {
-        $(window).on('load', function () {
-          modal.modal('show');
-        });
-      }
-
-      modal.on('hidden.bs.modal', function () {
-        try {
-          localStorage.setItem(storageKey, Date.now().toString());
-        } catch (error) {
-          // Ignore write errors so popup can still close gracefully
-        }
-      });
-    })();
-  </script>
+  <script src="js/main.js?v=2.1"></script>
 </body>
 
 </html>

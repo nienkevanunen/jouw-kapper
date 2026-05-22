@@ -1,111 +1,103 @@
-jQuery(document).ready(function($) {
+jQuery(function($) {
   "use strict";
 
-  //Contact
-  $('form.contactForm').submit(function() {
-    var f = $(this).find('.form-group'),
-      ferror = false,
-      emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+  var emailPattern = /^[^\s()<>@,;:/]+@\w[\w.-]+\.[a-z]{2,}$/i;
+  var defaultAction = 'https://api.web3forms.com/submit';
+  var defaultAccessKey = '5a94db67-d2f2-4f9f-82d9-c00ff4adaee0';
 
-    f.children('input').each(function() { // run all inputs
+  function parseRule(rule) {
+    var parts = String(rule || '').split(':');
 
-      var i = $(this); // current input
-      var rule = i.attr('data-rule');
+    return {
+      name: parts[0],
+      value: parts.slice(1).join(':')
+    };
+  }
 
-      if (rule !== undefined) {
-        var ierror = false; // error flag for current input
-        var pos = rule.indexOf(':', 0);
-        if (pos >= 0) {
-          var exp = rule.substr(pos + 1, rule.length);
-          rule = rule.substr(0, pos);
-        } else {
-          rule = rule.substr(pos + 1, rule.length);
-        }
+  function isFieldInvalid($field, parsedRule) {
+    var value = $.trim($field.val());
 
-        switch (rule) {
-          case 'required':
-            if (i.val() === '') {
-              ferror = ierror = true;
-            }
-            break;
+    switch (parsedRule.name) {
+      case 'required':
+        return value === '';
 
-          case 'minlen':
-            if (i.val().length < parseInt(exp)) {
-              ferror = ierror = true;
-            }
-            break;
+      case 'minlen':
+        return value.length < parseInt(parsedRule.value, 10);
 
-          case 'email':
-            if (!emailExp.test(i.val())) {
-              ferror = ierror = true;
-            }
-            break;
+      case 'email':
+        return !emailPattern.test(value);
 
-          case 'checked':
-            if (! i.is(':checked')) {
-              ferror = ierror = true;
-            }
-            break;
+      case 'checked':
+        return !$field.is(':checked');
 
-          case 'regexp':
-            exp = new RegExp(exp);
-            if (!exp.test(i.val())) {
-              ferror = ierror = true;
-            }
-            break;
-        }
-        i.next('.validation').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
-      }
-    });
-    f.children('textarea').each(function() { // run all inputs
+      case 'regexp':
+        return !(new RegExp(parsedRule.value)).test(value);
 
-      var i = $(this); // current input
-      var rule = i.attr('data-rule');
+      default:
+        return false;
+    }
+  }
 
-      if (rule !== undefined) {
-        var ierror = false; // error flag for current input
-        var pos = rule.indexOf(':', 0);
-        if (pos >= 0) {
-          var exp = rule.substr(pos + 1, rule.length);
-          rule = rule.substr(0, pos);
-        } else {
-          rule = rule.substr(pos + 1, rule.length);
-        }
+  function validateField() {
+    var $field = $(this);
+    var rule = $field.attr('data-rule');
+    var $validation = $field.next('.validation');
+    var invalid = false;
 
-        switch (rule) {
-          case 'required':
-            if (i.val() === '') {
-              ferror = ierror = true;
-            }
-            break;
-
-          case 'minlen':
-            if (i.val().length < parseInt(exp)) {
-              ferror = ierror = true;
-            }
-            break;
-        }
-        i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
-      }
-    });
-    if (ferror) return false;
-
-    var form = $(this);
-    var action = form.attr('action') || 'https://api.web3forms.com/submit';
-    var submitButton = form.find('button[type="submit"]');
-    var originalButtonText = submitButton.text();
-    var formData = new FormData(this);
-
-    if (!formData.has('access_key')) {
-      formData.append('access_key', '5a94db67-d2f2-4f9f-82d9-c00ff4adaee0');
+    if (rule) {
+      invalid = isFieldInvalid($field, parseRule(rule));
     }
 
-    submitButton.text('Versturen...').prop('disabled', true);
-    $("#sendmessage").removeClass("show");
-    $("#errormessage").removeClass("show");
+    $validation
+      .text(invalid ? ($field.attr('data-msg') || 'Controleer dit veld') : '')
+      .toggle(invalid);
 
-    fetch(action, {
-      method: "POST",
+    return !invalid;
+  }
+
+  function validateForm($form) {
+    var isValid = true;
+
+    $form.find('input, textarea').each(function() {
+      if (!validateField.call(this)) {
+        isValid = false;
+      }
+    });
+
+    return isValid;
+  }
+
+  function setFormState($button, originalText, isSubmitting) {
+    $button
+      .text(isSubmitting ? 'Versturen...' : originalText)
+      .prop('disabled', isSubmitting);
+  }
+
+  $('form.contactForm').on('submit', function(event) {
+    event.preventDefault();
+
+    var formElement = this;
+    var $form = $(formElement);
+    var $submitButton = $form.find('button[type="submit"]');
+    var originalButtonText = $submitButton.text();
+    var $successMessage = $('#sendmessage');
+    var $errorMessage = $('#errormessage');
+
+    if (!validateForm($form)) {
+      return false;
+    }
+
+    var formData = new FormData(formElement);
+    if (!formData.has('access_key')) {
+      formData.append('access_key', defaultAccessKey);
+    }
+
+    setFormState($submitButton, originalButtonText, true);
+    $successMessage.removeClass('show');
+    $errorMessage.removeClass('show').text('');
+
+    fetch($form.attr('action') || defaultAction, {
+      method: 'POST',
       body: formData
     })
       .then(function(response) {
@@ -114,21 +106,23 @@ jQuery(document).ready(function($) {
             throw new Error(data.message || 'Het bericht kon niet worden verzonden.');
           }
 
-          $("#sendmessage").addClass("show");
-          $("#errormessage").removeClass("show");
-          form.find("input:not([type='hidden']), textarea").val("");
+          $successMessage.addClass('show');
+          $errorMessage.removeClass('show').text('');
+          $form.find("input:not([type='hidden']), textarea").val('');
         });
       })
       .catch(function(error) {
-        $("#sendmessage").removeClass("show");
-        $("#errormessage").addClass("show");
-        $('#errormessage').html(error.message || 'Er ging iets mis. Probeer het opnieuw.');
+        $successMessage.removeClass('show');
+        $errorMessage
+          .text(error.message || 'Er ging iets mis. Probeer het opnieuw.')
+          .addClass('show');
       })
       .finally(function() {
-        submitButton.text(originalButtonText).prop('disabled', false);
+        setFormState($submitButton, originalButtonText, false);
       });
 
     return false;
   });
 
+  $('form.contactForm').on('input change', 'input, textarea', validateField);
 });
