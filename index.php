@@ -53,14 +53,14 @@
     License: https://bootstrapmade.com/license/
   ======================================================= -->
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157163460-1"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8KYDH0F99"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-157163460-1');
+    gtag('config', 'G-X8KYDH0F99');
   </script>
   <script src="https://kit.fontawesome.com/9479742b9e.js" crossorigin="anonymous"></script>
 
