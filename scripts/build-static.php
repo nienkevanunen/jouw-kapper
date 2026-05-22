@@ -68,6 +68,7 @@ $html = ob_get_clean();
 
 file_put_contents($dist . '/index.html', $html);
 file_put_contents($dist . '/.nojekyll', '');
+file_put_contents($dist . '/CNAME', "jouw-kapper.nl\n");
 
 foreach (['css', 'data', 'img', 'js', 'lib'] as $directory) {
     copy_directory($root . '/' . $directory, $dist . '/' . $directory);
