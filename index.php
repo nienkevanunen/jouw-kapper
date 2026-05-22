@@ -1,11 +1,30 @@
+<?php
+  require_once __DIR__ . '/includes/content.php';
+
+  $site = load_content('site.json');
+  $pageText = load_content('page-text.json');
+  $prices = load_content('prices.json');
+  $openingHours = load_content('opening-hours.json');
+  $promotions = load_content('promotions.json');
+  $gallery = load_content('gallery.json');
+
+  $activeAddress = get_active_address($site);
+  $address = $activeAddress['street'] ?? '';
+  $addressLine2 = $activeAddress['line2'] ?? '';
+  $addressFull = $activeAddress['fullHtml'] ?? '';
+  $mapsLink = $activeAddress['mapsLink'] ?? '';
+  $facebookUrl = $site['facebookUrl'] ?? 'https://www.facebook.com/profile.php?id=100063615640789';
+
+  $zaterdagSluit = get_schedule_variable('zaterdag_sluit', $openingHours);
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl-NL">
 
 <head>
   <meta charset="utf-8">
-  <title>Jouw Kapper - Monnickendam</title>
-  <meta content="Met al meer dan 20 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak." name="description">
-  <meta content="jouw kapper monnickendam waterland finnleys haircosmetics haarkleuren haarkleur knippen fohnen kleurbehandeling knip heren dames kinderen model tondeuse pony watergolf wassen permanenten uitgroei kleuring highlights verfspoeling deelkleuring balayage wenkbrauwen epileren verven opfrissen ervaring inspiratie flexibiliteit vak flexibel vrouw moeder werk feest bruiloft bruid arrangementen make-up haar nagels doneren gratis" name="keywords">
+  <title><?php echo htmlspecialchars(content_text($pageText, 'meta.title', 'Jouw Kapper - Monnickendam')); ?></title>
+  <meta content="<?php echo htmlspecialchars(content_text($pageText, 'meta.description')); ?>" name="description">
+  <meta content="<?php echo htmlspecialchars(content_text($pageText, 'meta.keywords')); ?>" name="keywords">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <!-- Favicons -->
@@ -66,12 +85,13 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Home</a></li>
-          <li><a href="#diensten">Diensten</a></li>
-          <li><a href="#schedule">Openingstijden</a></li>
-          <li><a href="#gallery">Portfolio</a></li>
-          <li><a href="#events">Acties</a></li>
-          <li class="buy-tickets"><a href="#contact">Contact</a></li>
+          <li class="menu-active"><a href="#intro"><?php echo htmlspecialchars(content_text($pageText, 'nav.home', 'Home')); ?></a></li>
+          <li><a href="#diensten"><?php echo htmlspecialchars(content_text($pageText, 'nav.services', 'Diensten')); ?></a></li>
+          <li><a href="#schedule"><?php echo htmlspecialchars(content_text($pageText, 'nav.hours', 'Openingstijden')); ?></a></li>
+          <li><a href="#updates"><?php echo htmlspecialchars(content_text($pageText, 'nav.updates', 'Updates')); ?></a></li>
+          <li><a href="#gallery"><?php echo htmlspecialchars(content_text($pageText, 'nav.portfolio', 'Portfolio')); ?></a></li>
+          <li><a href="#events"><?php echo htmlspecialchars(content_text($pageText, 'nav.promotions', 'Acties')); ?></a></li>
+          <li class="buy-tickets"><a href="#contact"><?php echo htmlspecialchars(content_text($pageText, 'nav.contact', 'Contact')); ?></a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -80,31 +100,6 @@
   <!--==========================
     Intro Section
     ============================-->
-
-<?php
-  $today = new DateTime();
-
-  // Determine which address to show based on date
-  $addressSwitchDate = new DateTime('2026-01-01');
-  if ($today >= $addressSwitchDate) {
-    $address = "'t Prooyen 4";
-    $addressLine2 = "Monnickendam";
-    $addressFull = "'t Prooyen 4<br>Monnickendam<br>Nederland";
-    $mapsLink = "https://maps.app.goo.gl/vmMJbsUXsttWDWAx7";
-  } else {
-    $address = "Kalversteeg 2-A";
-    $addressLine2 = "1141 SM Monnickendam";
-    $addressFull = "Kalversteeg 2-A<br>1141SM Monnickendam<br>Nederland";
-    $mapsLink = "https://goo.gl/maps/nVC19SeFZfMzkw4E7";
-  }
-
-  // Zaterdag openingstijden: vanaf 29 maart tot 16:30
-  $zaterdagSwitchDate = new DateTime('2026-03-29');
-  $zaterdagSluit = ($today >= $zaterdagSwitchDate) ? '16:30' : '13:30';
-?>
-
-
-
 
 	<section id="intro">
 		<div class="jumbotron text-white intro-container fadeIn ">
@@ -133,7 +128,7 @@
         <div class="row justify-content-center">
         	<div class="col-md-6 col-lg-4">
 				    <div class="text-center">
-					    <img src="img/logo.png?80172489074" alt="Jouw Kapper" class="img-fluid">
+					    <img src="img/logo.png?80172489074" alt="<?php echo htmlspecialchars(content_text($pageText, 'intro.logoAlt', 'Jouw Kapper')); ?>" class="img-fluid">
 					<!--<h1>Welkom bij<br><span>jouw</span> kapper.</h1>-->
 				    </div>
           </div>
@@ -141,7 +136,7 @@
 
 				<div class="row justify-content-center mt-4">
 					<div class="col-md-6">
-            <a href="https://portal.looppiness.com/jouw-kapper/" target="_blank">Klik hier om een afspraak te maken →</a>
+            <a href="<?php echo htmlspecialchars($site['bookingUrl'] ?? ''); ?>" target="_blank"><?php echo htmlspecialchars(content_text($pageText, 'intro.bookingLinkText', 'Klik hier om een afspraak te maken →')); ?></a>
           </div>
 				</div>
 			<!--<a href="#diensten" class="about-btn scrollto">Meer informatie</a>	-->
@@ -151,10 +146,10 @@
 						<div class="card mt-4">
 						  <video controls>
 							<source src="img/finnleys.mp4" type="video/mp4">
-							Sorry, jouw browser ondersteunt geen video elementen.
+							<?php echo htmlspecialchars(content_text($pageText, 'intro.videoFallback', 'Sorry, jouw browser ondersteunt geen video elementen.')); ?>
 						  </video>
 						</div>
-						<i><div class="card-text small">Partner van <a href="https://www.finnleys.eu/" target="_blank">Finnley's Haircosmetics</a></div></i>
+						<i><div class="card-text small"><?php echo htmlspecialchars(content_text($pageText, 'intro.partnerPrefix', 'Partner van')); ?> <a href="https://www.finnleys.eu/" target="_blank"><?php echo htmlspecialchars(content_text($pageText, 'intro.partnerName', "Finnley's Haircosmetics")); ?></a></div></i>
 					</div>
 				</div>
 
@@ -190,11 +185,12 @@
     <!--==========================
       Diensten Section
     ============================-->
-    <section id="diensten" class="wow fadeInUp">
+    <section id="diensten" class="site-section section-soft wow fadeInUp">
 
       <div class="container">
 		<div class="section-header">
-		  <h2>Diensten</h2>
+		  <h2><?php echo htmlspecialchars(content_text($pageText, 'sections.servicesTitle', 'Diensten')); ?></h2>
+      <p><?php echo htmlspecialchars(content_text($pageText, 'sections.servicesText', 'Heldere behandelingen en prijzen, overzichtelijk gegroepeerd per service.')); ?></p>
 		</div>
 	
 		<!--<div class="row justify-content-center mb-2">
@@ -204,185 +200,9 @@
 		</div>-->
 	
 
-    <!-- left -->
-		<div class="row justify-content-center">
-      <div class="col-lg-6">
-        <div class="row">
-          <div class='col-md-12 col-xs-12'>
-          <div class="d-flex justify-content-between align-items-center">
-              <h3 class="mt-4">Knippen Unisex</h3> 
-              <div class="mt-4 mr-4">vanaf</div>
-          </div>
-          <ul class="list-group list-group-flush"> 
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Wassen en knippen - kort<div><b>€33,50</b></div></div>
-              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€38,50</div></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Wassen en knippen - middel<div><b>€37,50</b></div></div>
-              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€42,50</div></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Wassen en knippen - lang<div><b>€41,50</b></div></div>
-              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€46,50</div></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Wassen en knippen - extra lang<div><b>€45,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center"><div class="text-muted">Inclusief model föhnen</div><div><div class="text-muted">€50,00</div></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <small class="text-muted">Elke knipbeurt is met droog föhnen</small>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Pony knippen <div><b>€10,00</b></div>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Tondeuse <div><b>€24,50</b></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center"><strong>Krullen knippen</strong><div></div></div>
-              <div class="d-flex justify-content-between align-items-center">Basis<div><b>€40,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Plus<div><b>€55,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Premium<div><b>€65,00</b></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center"><strong>Blow out</strong><div></div></div>
-              <div class="d-flex justify-content-between align-items-center">Kort<div><b>€25,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Middel<div><b>€30,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Lang<div><b>€35,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Extra lang<div><b>€40,00</b></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center"><strong>Permanent</strong><div></div></div>
-              <div class="d-flex justify-content-between align-items-center">Kort<div><b>€85,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Middel<div><b>€95,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Lang<div><b>€115,00</b></div></div>
-              <small class="text-muted">
-                <ul style="margin-bottom: 0; padding-left: 1.5rem;">
-                  <li>Incl. thuisverzorging pakket</li>
-                  <li>Incl. nabehandeling na 2 dagen in de salon</li>
-                  <li>Incl. advies voor onderhoud en styling</li>
-                </ul>
-              </small>
-            </li>
-
-          </ul>
-         </div>
-        <div class='col-md-12 col-xs-12'>
-          <div class="d-flex justify-content-between align-items-center">
-            <h3 class="mt-4">Knippen Kinderen</h3>
-            <div class="mt-4 mr-4">vanaf</div>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Knippen 0 t/m 4 jaar <div><b>€18,00</b></div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Knippen 5 t/m 8 jaar <div><b>€22,00</b></div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Knippen 9 t/m 12 jaar <div><b>€26,00</b></div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Knippen 13 t/m 15 jaar <div><b>€30,00</b></div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- right -->
-    <div class="col-lg-6">
-      <div class="row">
-        <div class='col-md-12 col-xs-12'>
-          <div class="d-flex justify-content-between align-items-center">
-            <h3 class="mt-4">Kleurbehandelingen</h3>
-            <div class="mt-4 mr-4">vanaf</div>
-          </div>
-          <ul class="list-group list-group-flush">
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Uitgroei kleuren vanaf<div><b>€45,00</b></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center"><strong>Full color</strong><div></div></div>
-              <div class="d-flex justify-content-between align-items-center">Kort<div><b>€50,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Middel<div><b>€55,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Lang<div><b>€60,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Extra lang<div><b>€65,00</b></div></div>
-              <small class="text-muted">80 cc in totaal. Bij extra bijmaak €4,50</small>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Highlights ALL (Spatel/Kam)<div><b>€45,00</b></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center"><strong>Highlights - Middel</strong><div></div></div>
-              <div class="d-flex justify-content-between align-items-center">Half<div><b>€75,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Full<div><b>€95,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Faceframe<div><b>€30,00</b></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center"><strong>Highlights - Lang</strong><div></div></div>
-              <div class="d-flex justify-content-between align-items-center">Half<div><b>€80,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Full<div><b>€100,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Faceframe<div><b>€35,00</b></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center"><strong>Highlights - Extra lang</strong><div></div></div>
-              <div class="d-flex justify-content-between align-items-center">Half<div><b>€85,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Full<div><b>€105,00</b></div></div>
-              <div class="d-flex justify-content-between align-items-center">Faceframe<div><b>€40,00</b></div></div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between align-items-center">Balayage<div><b>In overleg</b></div></div>
-            </li>
-
-          </ul>
-          </div>
-          
-          <div class='col-md-12 col-xs-12'>
-            <div class="d-flex justify-content-between align-items-center">
-            <h3 class="mt-4">Treatments</h3>
-              <div class="mt-4 mr-4">vanaf</div>
-            </div>
-            <ul class="list-group list-group-flush">
-
-              <li class="list-group-item">
-                <div class="d-flex justify-content-between align-items-center">Simplex behandeling <div><b>€30,00</b></div></div>
-                <div class="d-flex justify-content-between align-items-center"><small class="text-muted">(tijdens behandeling)</small><div><small>€10,00</small></div></div>
-              </li>
-
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Defrizz (keratine) behandeling <div><b>€150,00</b></div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Filltastic (botox) behandeling <div><b>€45,00</b></div>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-
+		<div class="row justify-content-center service-grid">
+      <?php render_price_sections($prices); ?>
 		  </div>
-      </div>
 	      <!--
         <div class="row justify-content-center">
         <div class="col-md-10">
@@ -392,43 +212,25 @@
           Neem contact op (+31 6 28583852) of kom langs!
         </div>
       </div>-->
+      </div>
   </section>
 
     <!--==========================
       Schedule Section
     ============================-->
-    <section id="schedule" class="wow fadeInUp">
+    <section id="schedule" class="site-section section-light wow fadeInUp">
 
       <div class="container">
 
         <div class="section-header">
-          <h2>Openingstijden</h2>
+          <h2><?php echo htmlspecialchars(content_text($pageText, 'sections.hoursTitle', 'Openingstijden')); ?></h2>
+          <p><?php echo htmlspecialchars(content_text($pageText, 'sections.hoursText', 'Plan je bezoek op een moment dat goed past.')); ?></p>
         </div>
 
 				<div class="row justify-content-center">
-					<div class="col-md-4">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Maandag <b>9:00 – 13:30</b>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Dinsdag <b>9:00 – 17:30</b>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Woensdag <b>9:00 – 17:30</b>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Donderdag <b>9:00 – 20:00</b>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Vrijdag <b>9:00 – 17:30</b>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Zaterdag <b>9:00 – <?php echo $zaterdagSluit; ?></b>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Zo <b>Op aanvraag</b>
-              </li>
+					<div class="col-sm-10 col-md-7 col-lg-5">
+            <ul class="list-group list-group-flush hours-card">
+              <?php render_opening_hours($openingHours, ['zaterdag_sluit' => $zaterdagSluit]); ?>
             </ul>
 					</div>
         </div>
@@ -436,22 +238,81 @@
     </section>
 
     <!--==========================
+      Updates Section
+    ============================-->
+    <section id="updates" class="site-section wow fadeInUp">
+      <div class="container">
+        <div class="updates-panel">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <div class="updates-copy">
+                <span class="updates-eyebrow"><?php echo htmlspecialchars(content_text($pageText, 'updates.eyebrow', 'Live vanaf Facebook')); ?></span>
+                <h2><?php echo htmlspecialchars(content_text($pageText, 'updates.title', 'Laatste updates uit de salon')); ?></h2>
+                <p>
+                  <?php echo content_nl2br(content_text($pageText, 'updates.text')); ?>
+                </p>
+
+                <div class="updates-pills" aria-label="Soorten updates">
+                  <?php foreach (content_lines(content_text($pageText, 'updates.pills')) as $pill) : ?>
+                    <span><?php echo htmlspecialchars($pill); ?></span>
+                  <?php endforeach; ?>
+                </div>
+
+                <a class="updates-button" href="<?php echo htmlspecialchars($facebookUrl); ?>" target="_blank" rel="noopener">
+                  <?php echo htmlspecialchars(content_text($pageText, 'updates.buttonText', 'Volg Jouw Kapper op Facebook')); ?>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-8">
+              <div class="facebook-updates-card">
+                <div class="facebook-updates-topbar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <div class="facebook-updates-feed text-center">
+                  <div class="fb-page"
+                    data-href="<?php echo htmlspecialchars($facebookUrl); ?>"
+                    data-tabs="timeline"
+                    data-width="640"
+                    data-height="560"
+                    data-small-header="true"
+                    data-adapt-container-width="true"
+                    data-hide-cover="false"
+                    data-show-facepile="false">
+                    <blockquote cite="<?php echo htmlspecialchars($facebookUrl); ?>" class="fb-xfbml-parse-ignore">
+                      <a href="<?php echo htmlspecialchars($facebookUrl); ?>" target="_blank" rel="noopener"><?php echo htmlspecialchars(content_text($pageText, 'updates.feedLinkText', 'Bekijk de laatste updates op Facebook')); ?></a>
+                    </blockquote>
+                  </div>
+                </div>
+
+                <p class="facebook-updates-fallback">
+                  <?php echo htmlspecialchars(content_text($pageText, 'updates.fallbackBeforeLink', 'Feed niet zichtbaar? Bekijk de updates direct op')); ?>
+                  <a href="<?php echo htmlspecialchars($facebookUrl); ?>" target="_blank" rel="noopener"><?php echo htmlspecialchars(content_text($pageText, 'updates.fallbackLinkText', 'Facebook')); ?></a><?php echo htmlspecialchars(content_text($pageText, 'updates.fallbackAfterLink', '.')); ?>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
       Gallery Section
     ============================-->
-    <section id="gallery" class="wow fadeInUp">
+    <section id="gallery" class="site-section section-soft wow fadeInUp">
 
       <div class="container">
         <div class="section-header">
-          <h2>Portfolio</h2>
+          <h2><?php echo htmlspecialchars(content_text($pageText, 'sections.portfolioTitle', 'Portfolio')); ?></h2>
+          <p><?php echo htmlspecialchars(content_text($pageText, 'sections.portfolioText', 'Een indruk van recent werk, kleuren en styling uit de salon.')); ?></p>
         </div>
       </div>
       <div class="container gallery-wrapper">
         <div class="owl-carousel gallery-carousel">
-          <?php
-            for ($x = 16; $x > 0; $x--) {
-                echo '<a href="img/gallery/'.$x.'.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/'.$x.'.jpg" alt=""></a>';
-            }
-          ?>
+          <?php render_gallery($gallery); ?>
         </div>
       </div>
 
@@ -460,32 +321,16 @@
     <!--==========================
       Event Section
     ============================-->
-    <section id="events" class="wow fadeInUp">
+    <section id="events" class="site-section section-light wow fadeInUp">
 
       <div class="container">
         <div class="section-header">
-          <h2>Acties</h2>
+          <h2><?php echo htmlspecialchars(content_text($pageText, 'sections.promotionsTitle', 'Acties')); ?></h2>
+          <p><?php echo htmlspecialchars(content_text($pageText, 'sections.promotionsText', 'Speciale mogelijkheden en arrangementen die extra aandacht verdienen.')); ?></p>
         </div>
 
-        <div class="row justify-content-center">
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <img class="card-img-top" src="img/acties/haarwensen.jpg" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Wil jij jouw haar doneren? Dan knippen wij jouw haar gratis!</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-              <img class="card-img-top" src="img/acties/bruiloft.jpg" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Heb jij binnenkort een feest of bruiloft? Of ben je zelf de bruid? Dan hebben wij verschillende arrangementen op maat! Haar en make-up, met eventueel nagels. Voor meer informatie zoals prijsopvage: bel, mail of app.</p>
-              </div>
-            </div>
-          </div>
-
-
+        <div class="row justify-content-center promo-grid">
+          <?php render_promotions($promotions); ?>
         </div>
       </div>
 
@@ -574,13 +419,13 @@
     <!--==========================
       Contact Section
     ============================-->
-    <section id="contact" class="section-bg wow fadeInUp">
+    <section id="contact" class="site-section section-soft wow fadeInUp">
 
       <div class="container">
 
         <div class="section-header">
-          <h2>Kom in contact</h2>
-          <p>Om een afspraak te maken, klik <a href="https://portal.looppiness.com/jouw-kapper/" target="_blank">hier</a> of neem contact op.</p>
+          <h2><?php echo htmlspecialchars(content_text($pageText, 'sections.contactTitle', 'Kom in contact')); ?></h2>
+          <p><?php echo htmlspecialchars(content_text($pageText, 'sections.contactTextBeforeLink', 'Om een afspraak te maken, klik')); ?> <a href="<?php echo htmlspecialchars($site['bookingUrl'] ?? ''); ?>" target="_blank"><?php echo htmlspecialchars(content_text($pageText, 'sections.contactLinkText', 'hier')); ?></a> <?php echo htmlspecialchars(content_text($pageText, 'sections.contactTextAfterLink', 'of neem contact op.')); ?></p>
         </div>
 
         <div class="row contact-info">
@@ -599,7 +444,7 @@
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3><i class="fa fa-phone"></i></h3>
-              <p><a href="tel:+31650747279">06 5074 7279</a></p>
+              <p><a href="tel:<?php echo htmlspecialchars($site['phone']['tel'] ?? ''); ?>"><?php echo htmlspecialchars($site['phone']['display'] ?? ''); ?></a></p>
             </div>
           </div>
 
@@ -607,35 +452,35 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3><i class="fa fa-pencil"></i></h3>
-              <p><a href="mailto:info@jouw-kapper.nl">info@jouw-kapper.nl</a></p>
+              <p><a href="mailto:<?php echo htmlspecialchars($site['email'] ?? ''); ?>"><?php echo htmlspecialchars($site['email'] ?? ''); ?></a></p>
             </div>
           </div>
 
         </div>
 
         <div class="form">
-          <div id="sendmessage">Bedankt voor het berichtje! We zullen zo snel mogelijk contact opnemen.</div>
+          <div id="sendmessage"><?php echo htmlspecialchars(content_text($pageText, 'contactForm.successMessage', 'Bedankt voor het berichtje! We zullen zo snel mogelijk contact opnemen.')); ?></div>
           <div id="errormessage"></div>
           <form action="" method="post" role="form" class="contactForm">
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Jouw naam" data-rule="minlen:3" data-msg="Please enter at least 3 chars" />
+                <input type="text" name="name" class="form-control" id="name" placeholder="<?php echo htmlspecialchars(content_text($pageText, 'contactForm.namePlaceholder', 'Jouw naam')); ?>" data-rule="minlen:3" data-msg="<?php echo htmlspecialchars(content_text($pageText, 'contactForm.nameValidation', 'Please enter at least 3 chars')); ?>" />
                 <div class="validation"></div>
               </div>
               <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Jouw email" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="<?php echo htmlspecialchars(content_text($pageText, 'contactForm.emailPlaceholder', 'Jouw email')); ?>" data-rule="email" data-msg="<?php echo htmlspecialchars(content_text($pageText, 'contactForm.emailValidation', 'Please enter a valid email')); ?>" />
                 <div class="validation"></div>
               </div>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Onderwerp" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="<?php echo htmlspecialchars(content_text($pageText, 'contactForm.subjectPlaceholder', 'Onderwerp')); ?>" data-rule="minlen:4" data-msg="<?php echo htmlspecialchars(content_text($pageText, 'contactForm.subjectValidation', 'Please enter at least 8 chars of subject')); ?>" />
               <div class="validation"></div>
             </div>
             <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Bericht"></textarea>
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="<?php echo htmlspecialchars(content_text($pageText, 'contactForm.messageValidation', 'Please write something for us')); ?>" placeholder="<?php echo htmlspecialchars(content_text($pageText, 'contactForm.messagePlaceholder', 'Bericht')); ?>"></textarea>
               <div class="validation"></div>
             </div>
-            <div class="text-center"><button type="submit">Verstuur</button></div>
+            <div class="text-center"><button type="submit"><?php echo htmlspecialchars(content_text($pageText, 'contactForm.submitButton', 'Verstuur')); ?></button></div>
           </form>
         </div>
 
@@ -648,21 +493,20 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header border-0 pb-0">
-          <h5 class="modal-title" id="newLocationModalLabel">We verhuizen!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Sluiten">
+          <h5 class="modal-title" id="newLocationModalLabel"><?php echo htmlspecialchars(content_text($pageText, 'modal.title', 'We verhuizen!')); ?></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo htmlspecialchars(content_text($pageText, 'modal.closeLabel', 'Sluiten')); ?>">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body pt-2 pb-4">
-          <p class="lead mb-2"><strong>Vanaf 5 januari</strong> verwelkomen we je op onze nieuwe locatie.</p>
+          <p class="lead mb-2"><?php echo htmlspecialchars(content_text($pageText, 'modal.lead', 'Vanaf 5 januari verwelkomen we je op onze nieuwe locatie.')); ?></p>
           <p class="mb-3">
-            <strong>'t Prooyen 4</strong><br>
-            Monnickendam
+            <?php echo content_nl2br(content_text($pageText, 'modal.address', "'t Prooyen 4\nMonnickendam")); ?>
           </p>
           <a class="btn btn-block new-location-btn" href="https://maps.app.goo.gl/vmMJbsUXsttWDWAx7" target="_blank" rel="noopener">
-            Bekijk route op Google Maps
+            <?php echo htmlspecialchars(content_text($pageText, 'modal.buttonText', 'Bekijk route op Google Maps')); ?>
           </a>
-          <small class="text-muted d-block mt-3">Tot snel op onze nieuwe plek!</small>
+          <small class="text-muted d-block mt-3"><?php echo htmlspecialchars(content_text($pageText, 'modal.footer', 'Tot snel op onze nieuwe plek!')); ?></small>
         </div>
       </div>
     </div>
@@ -678,34 +522,35 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <img src="img/logo.png" alt="Jouwkapper">
-            <p>Ik ben Marielle. Met al meer dan 20 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.</p>
+            <img src="img/logo.png" alt="<?php echo htmlspecialchars(content_text($pageText, 'footer.logoAlt', 'Jouwkapper')); ?>">
+            <p><?php echo htmlspecialchars(content_text($pageText, 'footer.aboutText')); ?></p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Links</h4>
+            <h4><?php echo htmlspecialchars(content_text($pageText, 'footer.linksTitle', 'Links')); ?></h4>
             <ul>
-              <li><i class="fa fa-angle-right"></i> <a href="#intro">Home</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#diensten">Diensten</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#schedule">Openingstijden</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#gallery">Portfolio</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#events">Acties</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#contact">Contact</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#intro"><?php echo htmlspecialchars(content_text($pageText, 'nav.home', 'Home')); ?></a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#diensten"><?php echo htmlspecialchars(content_text($pageText, 'nav.services', 'Diensten')); ?></a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#schedule"><?php echo htmlspecialchars(content_text($pageText, 'nav.hours', 'Openingstijden')); ?></a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#updates"><?php echo htmlspecialchars(content_text($pageText, 'nav.updates', 'Updates')); ?></a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#gallery"><?php echo htmlspecialchars(content_text($pageText, 'nav.portfolio', 'Portfolio')); ?></a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#events"><?php echo htmlspecialchars(content_text($pageText, 'nav.promotions', 'Acties')); ?></a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#contact"><?php echo htmlspecialchars(content_text($pageText, 'nav.contact', 'Contact')); ?></a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact</h4>
+            <h4><?php echo htmlspecialchars(content_text($pageText, 'footer.contactTitle', 'Contact')); ?></h4>
             <p>
               <?php echo $address; ?><br>
               <?php echo $addressLine2; ?><br>
-              Nederland<br>
-              <b>Mobiel:</b> (+31) 06 507 472 79<br>
-              <b>Email:</b> info@jouw-kapper.nl<br>
+              <?php echo htmlspecialchars(content_text($pageText, 'footer.country', 'Nederland')); ?><br>
+              <b><?php echo htmlspecialchars(content_text($pageText, 'footer.mobileLabel', 'Mobiel:')); ?></b> <?php echo htmlspecialchars($site['phone']['footer'] ?? ''); ?><br>
+              <b><?php echo htmlspecialchars(content_text($pageText, 'footer.emailLabel', 'Email:')); ?></b> <?php echo htmlspecialchars($site['email'] ?? ''); ?><br>
             </p>
 
             <div class="social-links">
-              <a href="https://www.facebook.com/profile.php?id=100063615640789" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="<?php echo htmlspecialchars($facebookUrl); ?>" class="facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
               <!--<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
               <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>-->
               <!--<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
@@ -715,11 +560,10 @@
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <h4>Facebook</h4>
-            <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100063615640789" data-tabs="timeline" data-width="320" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-              <blockquote cite="https://www.facebook.com/profile.php?id=100063615640789" class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/profile.php?id=100063615640789">Jouw Kapper</a>
-              </blockquote>
+            <h4><?php echo htmlspecialchars(content_text($pageText, 'footer.facebookTitle', 'Facebook')); ?></h4>
+            <p><?php echo htmlspecialchars(content_text($pageText, 'footer.facebookText', 'Bekijk de laatste nieuwtjes, acties en wijzigingen op onze Facebook-pagina.')); ?></p>
+            <div class="social-links">
+              <a href="<?php echo htmlspecialchars($facebookUrl); ?>" class="facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
 
@@ -729,7 +573,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; 2019 <b>Jouwkapper</b>. All Rights Reserved. | KvK: 68171390
+        <?php echo htmlspecialchars(format_copyright_notice(content_text($pageText, 'footer.copyright', 'Jouwkapper. All Rights Reserved. | KvK: 68171390'))); ?>
       </div>
       <!--<div class="credits">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>

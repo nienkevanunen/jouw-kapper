@@ -1,0 +1,143 @@
+{
+  "columns": [
+    {
+      "sections": [
+        {
+          "title": "Knippen Unisex",
+          "vanaf": true,
+          "entries": [
+            {
+              "lines": [
+                { "text": "Wassen en knippen - kort", "price": "33,50" },
+                { "text": "Inclusief model föhnen", "price": "38,50", "muted": true }
+              ]
+            },
+            {
+              "lines": [
+                { "text": "Wassen en knippen - middel", "price": "37,50" },
+                { "text": "Inclusief model föhnen", "price": "42,50", "muted": true }
+              ]
+            },
+            {
+              "lines": [
+                { "text": "Wassen en knippen - lang", "price": "41,50" },
+                { "text": "Inclusief model föhnen", "price": "46,50", "muted": true }
+              ]
+            },
+            {
+              "lines": [
+                { "text": "Wassen en knippen - extra lang", "price": "45,00" },
+                { "text": "Inclusief model föhnen", "price": "50,00", "muted": true }
+              ]
+            },
+            { "note": "Elke knipbeurt is met droog föhnen" },
+            { "text": "Pony knippen", "price": "10,00" },
+            { "text": "Tondeuse", "price": "24,50" },
+            {
+              "group": "Krullen knippen",
+              "lines": [
+                { "text": "Basis", "price": "40,00" },
+                { "text": "Plus", "price": "55,00" },
+                { "text": "Premium", "price": "65,00" }
+              ]
+            },
+            {
+              "group": "Blow out",
+              "lines": [
+                { "text": "Kort", "price": "25,00" },
+                { "text": "Middel", "price": "30,00" },
+                { "text": "Lang", "price": "35,00" },
+                { "text": "Extra lang", "price": "40,00" }
+              ]
+            },
+            {
+              "group": "Permanent",
+              "lines": [
+                { "text": "Kort", "price": "85,00" },
+                { "text": "Middel", "price": "95,00" },
+                { "text": "Lang", "price": "115,00" }
+              ],
+              "bullets": [
+                "Incl. thuisverzorging pakket",
+                "Incl. nabehandeling na 2 dagen in de salon",
+                "Incl. advies voor onderhoud en styling"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Knippen Kinderen",
+          "vanaf": true,
+          "entries": [
+            { "text": "Knippen 0 t/m 4 jaar", "price": "18,00" },
+            { "text": "Knippen 5 t/m 8 jaar", "price": "22,00" },
+            { "text": "Knippen 9 t/m 12 jaar", "price": "26,00" },
+            { "text": "Knippen 13 t/m 15 jaar", "price": "30,00" }
+          ]
+        }
+      ]
+    },
+    {
+      "sections": [
+        {
+          "title": "Kleurbehandelingen",
+          "vanaf": true,
+          "entries": [
+            { "text": "Uitgroei kleuren vanaf", "price": "45,00" },
+            {
+              "group": "Full color",
+              "lines": [
+                { "text": "Kort", "price": "50,00" },
+                { "text": "Middel", "price": "55,00" },
+                { "text": "Lang", "price": "60,00" },
+                { "text": "Extra lang", "price": "65,00" }
+              ],
+              "note": "80 cc in totaal. Bij extra bijmaak €4,50"
+            },
+            {
+              "group": "Highlights",
+              "lines": [
+                { "text": "¼", "price": "75,00" },
+                { "text": "½", "price": "85,00" },
+                { "text": "¾", "price": "95,00" },
+                { "text": "Full", "price": "129,95" }
+              ]
+            },
+            {
+              "group": "Toeslagen",
+              "lines": [
+                { "text": "Dik haar", "price": "17,50" },
+                { "text": "Lang haar", "price": "22,50" },
+                { "text": "Keratine", "price": "10,00" }
+              ]
+            },
+            {
+              "group": "Toner",
+              "lines": [
+                { "text": "Na kleur", "price": "25,00" },
+                { "text": "Los", "price": "35,00" },
+                { "text": "Lang/middel", "price": "45,00" },
+                { "text": "Lang extra", "price": "55,00" }
+              ]
+            },
+            { "text": "Balayage", "price": "In overleg" }
+          ]
+        },
+        {
+          "title": "Treatments",
+          "vanaf": true,
+          "entries": [
+            {
+              "lines": [
+                { "text": "Simplex behandeling", "price": "30,00" },
+                { "text": "(tijdens behandeling)", "price": "10,00", "muted": true }
+              ]
+            },
+            { "text": "Defrizz (keratine) behandeling", "price": "150,00" },
+            { "text": "Filltastic (botox) behandeling", "price": "45,00" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "col": "col-md-3",
+      "image": "img/acties/haarwensen.jpg",
+      "text": "Wil jij jouw haar doneren? Dan knippen wij jouw haar gratis!"
+    },
+    {
+      "col": "col-md-4",
+      "image": "img/acties/bruiloft.jpg",
+      "text": "Voor een feest, bruiloft of andere bijzondere gelegenheid denken we graag met je mee over haar, make-up en eventueel nagels. Bel, mail of app voor de mogelijkheden en prijzen."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "Jouw Kapper - Monnickendam",
+    "description": "Jouw Kapper in Monnickendam is de salon van Marielle voor knippen, kleuren, styling en persoonlijk haaradvies. Maak eenvoudig online een afspraak.",
+    "keywords": "jouw kapper monnickendam kapper monnickendam kapsalon monnickendam haar knippen kleuren styling haaradvies dames heren kinderen finnleys haircosmetics waterland afspraak maken"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Diensten",
+    "hours": "Openingstijden",
+    "updates": "Updates",
+    "portfolio": "Portfolio",
+    "promotions": "Acties",
+    "contact": "Contact"
+  },
+  "intro": {
+    "logoAlt": "Jouw Kapper",
+    "bookingLinkText": "Klik hier om een afspraak te maken →",
+    "videoFallback": "Sorry, jouw browser ondersteunt geen video elementen.",
+    "partnerPrefix": "Partner van",
+    "partnerName": "Finnley's Haircosmetics"
+  },
+  "sections": {
+    "servicesTitle": "Diensten",
+    "servicesText": "Heldere behandelingen en prijzen, overzichtelijk gegroepeerd per service.",
+    "hoursTitle": "Openingstijden",
+    "hoursText": "Plan je bezoek op een moment dat goed past.",
+    "portfolioTitle": "Portfolio",
+    "portfolioText": "Een indruk van recent werk, kleuren en styling uit de salon.",
+    "promotionsTitle": "Acties",
+    "promotionsText": "Speciale mogelijkheden en arrangementen die extra aandacht verdienen.",
+    "contactTitle": "Kom in contact",
+    "contactTextBeforeLink": "Om een afspraak te maken, klik",
+    "contactLinkText": "hier",
+    "contactTextAfterLink": "of neem contact op."
+  },
+  "updates": {
+    "eyebrow": "Live vanaf Facebook",
+    "title": "Laatste updates uit de salon",
+    "text": "Marielle deelt regelmatig nieuws, acties, sfeerbeelden en praktische wijzigingen op Facebook.\nJe ziet de nieuwste berichten hier direct terug.",
+    "pills": "Nieuws\nActies\nOpeningstijden",
+    "buttonText": "Volg Jouw Kapper op Facebook",
+    "feedLinkText": "Bekijk de laatste updates op Facebook",
+    "fallbackBeforeLink": "Feed niet zichtbaar? Bekijk de updates direct op",
+    "fallbackLinkText": "Facebook",
+    "fallbackAfterLink": "."
+  },
+  "contactForm": {
+    "successMessage": "Bedankt voor het berichtje! We zullen zo snel mogelijk contact opnemen.",
+    "namePlaceholder": "Jouw naam",
+    "nameValidation": "Please enter at least 3 chars",
+    "emailPlaceholder": "Jouw email",
+    "emailValidation": "Please enter a valid email",
+    "subjectPlaceholder": "Onderwerp",
+    "subjectValidation": "Please enter at least 8 chars of subject",
+    "messagePlaceholder": "Bericht",
+    "messageValidation": "Please write something for us",
+    "submitButton": "Verstuur"
+  },
+  "modal": {
+    "title": "We verhuizen!",
+    "closeLabel": "Sluiten",
+    "lead": "Vanaf 5 januari verwelkomen we je op onze nieuwe locatie.",
+    "address": "'t Prooyen 4\nMonnickendam",
+    "buttonText": "Bekijk route op Google Maps",
+    "footer": "Tot snel op onze nieuwe plek!"
+  },
+  "footer": {
+    "logoAlt": "Jouwkapper",
+    "aboutText": "Ik ben Marielle. Met al meer dan 20 jaar ervaring vind ik dit werk nog steeds elke dag net zo leuk. Iedere dag weer een nieuwe inspiratie! Als vrouw en moeder weet ik dat flexibiliteit belangrijk is. Door jou dat aan te bieden kan ik zelf ook flexibel zijn in het uitoefenen van mijn vak.",
+    "linksTitle": "Links",
+    "contactTitle": "Contact",
+    "country": "Nederland",
+    "mobileLabel": "Mobiel:",
+    "emailLabel": "Email:",
+    "facebookTitle": "Facebook",
+    "facebookText": "Bekijk de laatste nieuwtjes, acties en wijzigingen op onze Facebook-pagina.",
+    "copyright": "Jouwkapper. All Rights Reserved. | KvK: 68171390"
+  }
+}

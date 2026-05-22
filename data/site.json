@@ -1,0 +1,26 @@
+{
+  "phone": {
+    "display": "06 5074 7279",
+    "tel": "+31650747279",
+    "footer": "(+31) 06 507 472 79"
+  },
+  "email": "info@jouw-kapper.nl",
+  "bookingUrl": "https://portal.looppiness.com/jouw-kapper/",
+  "facebookUrl": "https://www.facebook.com/profile.php?id=100063615640789",
+  "addresses": [
+    {
+      "from": "2026-01-01",
+      "street": "'t Prooyen 4",
+      "line2": "Monnickendam",
+      "fullHtml": "'t Prooyen 4<br>Monnickendam<br>Nederland",
+      "mapsLink": "https://maps.app.goo.gl/vmMJbsUXsttWDWAx7"
+    },
+    {
+      "until": "2026-01-01",
+      "street": "Kalversteeg 2-A",
+      "line2": "1141 SM Monnickendam",
+      "fullHtml": "Kalversteeg 2-A<br>1141SM Monnickendam<br>Nederland",
+      "mapsLink": "https://goo.gl/maps/nVC19SeFZfMzkw4E7"
+    }
+  ]
+}
