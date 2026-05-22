@@ -461,8 +461,7 @@
         <div class="form">
           <div id="sendmessage"><?php echo htmlspecialchars(content_text($pageText, 'contactForm.successMessage', 'Bedankt voor het berichtje! We zullen zo snel mogelijk contact opnemen.')); ?></div>
           <div id="errormessage"></div>
-          <form action="https://api.web3forms.com/submit" method="post" role="form" class="contactForm">
-            <input type="hidden" name="access_key" value="5a94db67-d2f2-4f9f-82d9-c00ff4adaee0">
+          <form action="" method="post" role="form" class="contactForm">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <input type="text" name="name" class="form-control" id="name" placeholder="<?php echo htmlspecialchars(content_text($pageText, 'contactForm.namePlaceholder', 'Jouw naam')); ?>" data-rule="minlen:3" data-msg="<?php echo htmlspecialchars(content_text($pageText, 'contactForm.nameValidation', 'Please enter at least 3 chars')); ?>" />
