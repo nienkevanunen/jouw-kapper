@@ -49,6 +49,8 @@ Ga naar **`/admin/`** op je website en log in met je wachtwoord. Daar kun je pri
 
 Voor afbeeldingen kun je JPG, PNG, WebP of GIF uploaden. Portfoliofoto's worden opgeslagen in `img/gallery/`; actie-afbeeldingen in `img/acties/`.
 
+Op GitHub Pages werkt PHP-login niet. Gebruik daar de statische `/admin/` pagina met een GitHub token om deze JSON-bestanden te wijzigen. Zie `GITHUB_PAGES.md`.
+
 ### Wachtwoord instellen (eenmalig)
 
 Op de server, in de projectmap:

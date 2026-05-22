@@ -53,14 +53,14 @@
     License: https://bootstrapmade.com/license/
   ======================================================= -->
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157163460-1"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8KYDH0F99"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-157163460-1');
+    gtag('config', 'G-X8KYDH0F99');
   </script>
   <script src="https://kit.fontawesome.com/9479742b9e.js" crossorigin="anonymous"></script>
 
@@ -461,7 +461,8 @@
         <div class="form">
           <div id="sendmessage"><?php echo htmlspecialchars(content_text($pageText, 'contactForm.successMessage', 'Bedankt voor het berichtje! We zullen zo snel mogelijk contact opnemen.')); ?></div>
           <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
+          <form action="https://api.web3forms.com/submit" method="post" role="form" class="contactForm">
+            <input type="hidden" name="access_key" value="5a94db67-d2f2-4f9f-82d9-c00ff4adaee0">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <input type="text" name="name" class="form-control" id="name" placeholder="<?php echo htmlspecialchars(content_text($pageText, 'contactForm.namePlaceholder', 'Jouw naam')); ?>" data-rule="minlen:3" data-msg="<?php echo htmlspecialchars(content_text($pageText, 'contactForm.nameValidation', 'Please enter at least 3 chars')); ?>" />

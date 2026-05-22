@@ -89,28 +89,45 @@ jQuery(document).ready(function($) {
       }
     });
     if (ferror) return false;
-    else var str = $(this).serialize();
-    var action = $(this).attr('action');
-    if( ! action ) {
-      action = 'contactform/contactform.php';
+
+    var form = $(this);
+    var action = form.attr('action') || 'https://api.web3forms.com/submit';
+    var submitButton = form.find('button[type="submit"]');
+    var originalButtonText = submitButton.text();
+    var formData = new FormData(this);
+
+    if (!formData.has('access_key')) {
+      formData.append('access_key', '5a94db67-d2f2-4f9f-82d9-c00ff4adaee0');
     }
-    $.ajax({
-      type: "POST",
-      url: action,
-      data: str,
-      success: function(msg) {
-        //alert(msg);
-        if (msg == 'OK') {
+
+    submitButton.text('Versturen...').prop('disabled', true);
+    $("#sendmessage").removeClass("show");
+    $("#errormessage").removeClass("show");
+
+    fetch(action, {
+      method: "POST",
+      body: formData
+    })
+      .then(function(response) {
+        return response.json().then(function(data) {
+          if (!response.ok || data.success === false) {
+            throw new Error(data.message || 'Het bericht kon niet worden verzonden.');
+          }
+
           $("#sendmessage").addClass("show");
           $("#errormessage").removeClass("show");
-          $('.contactForm').find("input, textarea").val("");
-        } else {
-          $("#sendmessage").removeClass("show");
-          $("#errormessage").addClass("show");
-          $('#errormessage').html(msg);
-        }
-      }
-    });
+          form.find("input:not([type='hidden']), textarea").val("");
+        });
+      })
+      .catch(function(error) {
+        $("#sendmessage").removeClass("show");
+        $("#errormessage").addClass("show");
+        $('#errormessage').html(error.message || 'Er ging iets mis. Probeer het opnieuw.');
+      })
+      .finally(function() {
+        submitButton.text(originalButtonText).prop('disabled', false);
+      });
+
     return false;
   });
 

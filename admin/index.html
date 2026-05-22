@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jouw Kapper beheer</title>
+  <link rel="stylesheet" href="admin.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8KYDH0F99"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-X8KYDH0F99');
+  </script>
+</head>
+<body>
+  <main class="admin-shell">
+    <section class="card">
+      <p class="eyebrow">Jouw Kapper</p>
+      <h1>Website beheer</h1>
+      <p>
+        Bewerk de JSON-bestanden van de website en sla ze direct op in GitHub.
+        Na opslaan publiceert GitHub Pages de site opnieuw.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Verbinden met GitHub</h2>
+      <p class="help">
+        Gebruik een fine-grained GitHub token met alleen <strong>Contents: Read and write</strong>
+        voor <strong>nienkevanunen/jouw-kapper</strong>. De token wordt alleen in deze browser gebruikt.
+      </p>
+
+      <label for="token">GitHub token</label>
+      <input id="token" type="password" autocomplete="off" placeholder="github_pat_...">
+
+      <div class="row">
+        <label class="checkbox">
+          <input id="remember-token" type="checkbox">
+          Onthoud token op deze browser
+        </label>
+        <button id="forget-token" type="button" class="secondary">Vergeet token</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Inhoud bewerken</h2>
+
+      <div class="toolbar">
+        <div>
+          <label for="content-file">Bestand</label>
+          <select id="content-file"></select>
+        </div>
+        <div>
+          <label for="branch">Branch</label>
+          <input id="branch" type="text" value="github-pages-static">
+        </div>
+      </div>
+
+      <textarea id="editor" spellcheck="false" placeholder="Kies een bestand om te laden"></textarea>
+
+      <div class="actions">
+        <button id="load-file" type="button" class="secondary">Laden</button>
+        <button id="save-file" type="button">Opslaan en publiceren</button>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
